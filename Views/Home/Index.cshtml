@@ -52,9 +52,9 @@
                     {
                         WaveTheCave.Models.Cart p = ViewBag.Carrello[i];
                         <div>
-                            <p class="fw-bold my-0">@p.Nome</p>
-                            <p class="my-0">x(@p.Quantita)</p>
-                            <p class="my-0">x(@p.IdOrari)</p>
+                            <p class="fw-bold my-0">// @p.Nome</p>
+                            <p class="my-0">// (@p.Quantita)</p>
+                            <p class="my-0">// @p.OrariGrotte </p>
                          
                             @Html.ActionLink("Rimuovi", "Remove", "Home", new { id = i }, new { @class = "btn my-2" })
                         </div>

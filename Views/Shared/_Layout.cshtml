@@ -40,11 +40,13 @@
                 }
                 else
                 {
-                    <ul class="navbar-nav flex-grow-1 d-flex justify-content-end">
-                        <li>@Html.ActionLink("Login", "Login", "Auth", new { area = "" }, new { @class = "nav-link" })</li>
-                        <li>@Html.ActionLink("Sign In", "SignIn", "Auth", new { area = "" }, new { @class = "nav-link" })</li>
-                     
-                    </ul>
+            <ul class="navbar-nav flex-grow-1 d-flex justify-content-end">
+                <li>@Html.ActionLink("Login", "Login", "Auth", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Sign In", "SignIn", "Auth", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+
+
+            </ul>
                 }
             </div>
 

@@ -16,16 +16,18 @@ namespace WaveTheCave.Models
         public int IdUser { get; set; }
         
         public int IdGrotte { get; set; }
-      
+        public string OrariGrotte { get; set; }
        
         public Cart() { }
-        public Cart(int quantita, string nome, decimal costoGrotta, int idGrotte)
+        public Cart(int quantita, string nome, decimal costoGrotta, int idGrotte, int idOrario,string orariGrotte)
         {
             Quantita = quantita;
             Nome = nome;
             CostoGrotta = costoGrotta;
             IdGrotte = idGrotte;
-            
+            IdOrari = idOrario;
+            OrariGrotte = orariGrotte;
+
         }
 
         public static decimal CalcoloCostoTotale(List<Cart> cart)
