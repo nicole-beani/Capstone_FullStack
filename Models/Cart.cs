@@ -8,14 +8,16 @@ namespace WaveTheCave.Models
     public class Cart
     {
         public int Quantita { get; set; }
-
+        public DateTime Data { get; set; }
         public string Nome { get; set; }
         public decimal CostoGrotta { get; set; }
-
+        public decimal Importo { get; set; }
+        public int IdOrari { get; set; }
+        public int IdUser { get; set; }
         
         public int IdGrotte { get; set; }
-
-
+      
+       
         public Cart() { }
         public Cart(int quantita, string nome, decimal costoGrotta, int idGrotte)
         {
@@ -23,7 +25,7 @@ namespace WaveTheCave.Models
             Nome = nome;
             CostoGrotta = costoGrotta;
             IdGrotte = idGrotte;
-
+            
         }
 
         public static decimal CalcoloCostoTotale(List<Cart> cart)

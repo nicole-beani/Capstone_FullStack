@@ -20,9 +20,17 @@
 
                         <p class="fw-bold mx-2">$@item.Prezzo</p>
                     </div>
+                   
                     <div class="mx-2 col">
                         @using (Html.BeginForm("AddToCart", "Home", FormMethod.Post))
                         {
+                            <div class="form-group">
+                              
+                                <div class="form-group">
+                                    <label for="IdOrari">Orari</label>
+                                    @Html.DropDownList("IdOrari", new SelectList(ViewBag.IdOrari, "Value", "Text"), new { @class = "form-control" })
+                                </div>
+                            </div>
                             @Html.Hidden("IdGrotte", item.IdGrotte)
 
                             <label for="Quantita">Quantità</label>
@@ -46,13 +54,15 @@
                         <div>
                             <p class="fw-bold my-0">@p.Nome</p>
                             <p class="my-0">x(@p.Quantita)</p>
+                            <p class="my-0">x(@p.IdOrari)</p>
+                         
                             @Html.ActionLink("Rimuovi", "Remove", "Home", new { id = i }, new { @class = "btn my-2" })
                         </div>
                         <hr />
                     }
                     <div class="d-flex flex-column  align-items-md-center">
                         <p class="fw-bold">Totale: $@WaveTheCave.Models.Cart.CalcoloCostoTotale(ViewBag.Carrello)</p>
-                        @Html.ActionLink("Ordina", "AddPrenotazione", "Prenotazione", "", new { @class = "btn" })
+                        @Html.ActionLink("Prenota", "AddPrenotazione", "Prenotazione", "", new { @class = "btn" })
                     </div>
                 }
             </div>

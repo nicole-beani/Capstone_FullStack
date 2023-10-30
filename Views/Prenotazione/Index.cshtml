@@ -1,0 +1,52 @@
+﻿@model IEnumerable<WaveTheCave.Models.Prenotazione>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Orari.OrariGrotte)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Importo)
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Orari.OrariGrotte)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Importo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdPrenotazione }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdPrenotazione }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdPrenotazione })
+        </td>
+    </tr>
+}
+
+</table>

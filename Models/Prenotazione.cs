@@ -34,5 +34,16 @@ namespace WaveTheCave.Models
         public virtual Orari Orari { get; set; }
 
         public virtual User User { get; set; }
+        public Prenotazione( DateTime? data, decimal? importo, int? idOrari, int? idUser)
+        {
+            
+            Data = data;
+            Importo = importo;
+            IdOrari = idOrari;
+            IdUser = idUser;
+           
+           
+        }
+
     }
 }

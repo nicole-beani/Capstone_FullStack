@@ -14,12 +14,25 @@ namespace WaveTheCave.Controllers
         {
             private static ModelDBContext db = new ModelDBContext();
 
-
-            public ActionResult Index()
+        public List<Orari> orari = db.Orari.ToList();
+        public List<SelectListItem> a
+        {
+            get
+            {
+                List<SelectListItem> aList = new List<SelectListItem>();
+                foreach (Orari agg in orari)
+                {
+                    SelectListItem item = new SelectListItem { Text = agg.OrariGrotte , Value = agg.IdOrari.ToString() };
+                    aList.Add(item);
+                }
+                return aList;
+            }
+        }
+        public ActionResult Index()
             {
                 ViewBag.Title = "Home Page";
-
-                ViewBag.Carrello = Session["Carrello"];
+            ViewBag.IdOrari = a ;
+            ViewBag.Carrello = Session["Carrello"];
                 return View(db.Grotte.ToList());
             }
             public ActionResult AddToCart(int IdGrotte, int Quantita)

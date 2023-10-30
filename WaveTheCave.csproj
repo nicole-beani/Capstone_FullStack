@@ -124,6 +124,7 @@
     <Compile Include="Controllers\GrotteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrariController.cs" />
+    <Compile Include="Controllers\PrenotazioneController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -134,6 +135,10 @@
     <Compile Include="Migrations\202310301149153_Generale.cs" />
     <Compile Include="Migrations\202310301149153_Generale.designer.cs">
       <DependentUpon>202310301149153_Generale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202310301407348_DetP.cs" />
+    <Compile Include="Migrations\202310301407348_DetP.designer.cs">
+      <DependentUpon>202310301407348_DetP.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cart.cs" />
@@ -208,6 +213,8 @@
     <Content Include="Views\Auth\Login.cshtml" />
     <Content Include="Views\Auth\SignIn.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Prenotazione\AddPrenotazione.cshtml" />
+    <Content Include="Views\Prenotazione\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -245,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202310301149153_Generale.resx">
       <DependentUpon>202310301149153_Generale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202310301407348_DetP.resx">
+      <DependentUpon>202310301407348_DetP.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

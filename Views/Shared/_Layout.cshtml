@@ -25,7 +25,7 @@
                         <li>@Html.ActionLink("Orari", "Index", "Orari", new { area = "" }, new { @class = "nav-link" })</li>
                         <li>@Html.ActionLink("Prenotazione", "Index", "Prenotazione", new { area = "" }, new { @class = "nav-link" })</li>
 
-                        <li>Benvenuto @User.Identity.Name</li>
+                       
                         <li>@Html.ActionLink("Logout", "Logout", "Auth", new { area = "" }, new { @class = "nav-link" })</li>
                     </ul>
                 }
@@ -34,7 +34,7 @@
                     <ul class="navbar-nav flex-grow-1 d-flex justify-content-between align-items-center">
                         <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
 
-                        <li>Benvenuto @User.Identity.Name</li>
+                        <li>@Html.ActionLink("H", "Index", "Prenotazione", new { area = "" }, new { @class = "nav-link" })</li>
                         <li>@Html.ActionLink("Logout", "Logout", "Auth", new { area = "" }, new { @class = "nav-link" })</li>
                     </ul>
                 }

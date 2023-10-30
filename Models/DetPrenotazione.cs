@@ -9,6 +9,13 @@ namespace WaveTheCave.Models
     [Table("DetPrenotazione")]
     public partial class DetPrenotazione
     {
+        public DetPrenotazione(int quantita, int idGrotte, int idPrenotazione)
+        {
+            Quantita = quantita;
+            IdGrotte = idGrotte;
+            IdPrenotazione = idPrenotazione;
+        }
+
         [Key]
         public int IdDetPrenotazione { get; set; }
 
