@@ -1,0 +1,26 @@
+﻿@model WaveTheCave.Models.Orari
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Orari</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OrariGrotte)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrariGrotte)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdOrari }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
