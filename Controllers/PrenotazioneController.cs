@@ -34,7 +34,7 @@ namespace WaveTheCave.Controllers
             User user = db.User.FirstOrDefault(u => u.Username == User.Identity.Name);
             prenotazione.IdUser = user.IdUser;
 
-            if (ModelState.IsValid)
+           if (ModelState.IsValid)
             {
 
 
@@ -45,11 +45,11 @@ namespace WaveTheCave.Controllers
                     db.SaveChanges();
                 }
                 Session.Remove("Carrello");
-                return RedirectToAction("Index", "DetPrenotazione");
+                return RedirectToAction("Index", " Home");
             }
             else { return View(); }
+          
         }
-
         [Authorize(Roles = "Admin")]
         public ActionResult Index()
         {

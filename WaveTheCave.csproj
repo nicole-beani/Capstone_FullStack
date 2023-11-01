@@ -141,6 +141,10 @@
     <Compile Include="Migrations\202310301407348_DetP.designer.cs">
       <DependentUpon>202310301407348_DetP.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202311011601493_Diagram.cs" />
+    <Compile Include="Migrations\202311011601493_Diagram.designer.cs">
+      <DependentUpon>202311011601493_Diagram.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\DetPrenotazione.cs" />
@@ -258,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202310301407348_DetP.resx">
       <DependentUpon>202310301407348_DetP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311011601493_Diagram.resx">
+      <DependentUpon>202311011601493_Diagram.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
