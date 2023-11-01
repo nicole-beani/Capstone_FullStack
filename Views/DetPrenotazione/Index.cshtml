@@ -1,0 +1,48 @@
+﻿@model IEnumerable<WaveTheCave.Models.DetPrenotazione>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@if (Model == null)
+{
+    <p class="alert alert-danger">@ViewBag.Error</p>
+}
+else
+{
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Grotte.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prenotazione.IdPrenotazione)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantita)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Grotte.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Prenotazione.IdPrenotazione)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantita)
+                </td>
+
+            </tr>
+        }
+    </table>
+    <p class="mx-2"> Totale: $@ViewBag.Prenotazione.Importo</p>
+  
+    
+ 
+}

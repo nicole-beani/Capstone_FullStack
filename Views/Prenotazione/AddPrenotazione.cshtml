@@ -11,8 +11,9 @@
         foreach (WaveTheCave.Models.Cart p in ViewBag.Carrello)
         {
             <div class="m-4">
-                <p class="fw-bold my-0">@p.Nome</p>
-                <p class="my-0">x(@p.Quantita)</p>
+                <p class="fw-bold my-0">//@p.Nome</p>
+                <p class="my-0">//(@p.Quantita)</p>
+                <p class="my-0">// @p.OrariGrotte </p>
                 <div class="form-group">
                     @Html.LabelFor(model => model.Data, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
@@ -21,9 +22,9 @@
                     </div>
                 </div>
 
-              
 
-               
+
+
             </div>
             <hr />
         }

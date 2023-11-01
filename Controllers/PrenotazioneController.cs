@@ -45,7 +45,7 @@ namespace WaveTheCave.Controllers
                     db.SaveChanges();
                 }
                 Session.Remove("Carrello");
-                return RedirectToAction("Index", "DettaglioPrenotazione");
+                return RedirectToAction("Index", "DetPrenotazione");
             }
             else { return View(); }
         }

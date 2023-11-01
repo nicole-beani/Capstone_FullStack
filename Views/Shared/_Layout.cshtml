@@ -31,12 +31,13 @@
                 }
                 else if (User.IsInRole("User"))
                 {
-                    <ul class="navbar-nav flex-grow-1 d-flex justify-content-between align-items-center">
-                        <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+            <ul class="navbar-nav flex-grow-1 d-flex justify-content-between align-items-center">
+                <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
 
-                        <li>@Html.ActionLink("H", "Index", "Prenotazione", new { area = "" }, new { @class = "nav-link" })</li>
-                        <li>@Html.ActionLink("Logout", "Logout", "Auth", new { area = "" }, new { @class = "nav-link" })</li>
-                    </ul>
+                <li>@Html.ActionLink("H", "Index", "Prenotazione", new { area = "" }, new { @class = "nav-link" })</li>
+              
+                <li>@Html.ActionLink("Logout", "Logout", "Auth", new { area = "" }, new { @class = "nav-link" })</li>
+            </ul>
                 }
                 else
                 {
@@ -44,6 +45,7 @@
                 <li>@Html.ActionLink("Login", "Login", "Auth", new { area = "" }, new { @class = "nav-link" })</li>
                 <li>@Html.ActionLink("Sign In", "SignIn", "Auth", new { area = "" }, new { @class = "nav-link" })</li>
                 <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("H", "Index", "DetPrenotazione", new { area = "" }, new { @class = "nav-link" })</li>
 
 
             </ul>
