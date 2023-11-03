@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using WaveTheCave.Models;
@@ -21,6 +22,21 @@ namespace WaveTheCave.Controllers
             ViewBag.Carrello = Session["Carrello"];
           
             return View();
+        }
+        [HttpPost]
+        public ActionResult AddData (Cart c) 
+        {
+            List<Cart> lista = ViewBag.Carrello;
+
+         foreach(Cart item in lista)
+            {
+                if (item.IdGrotte == c.IdGrotte)
+                {
+                    item.Data = c.Data;
+                }
+            }
+          ViewBag.Carrello = lista;
+            return RedirectToAction("AddPrenotazione");
         }
 
         [HttpPost]
@@ -42,8 +58,8 @@ namespace WaveTheCave.Controllers
                 {
                     Prenotazione d = new Prenotazione(item.Data, item.Importo, item.IdOrari, item.IdUser);
                     db.Prenotazione.Add(d);
-                    db.SaveChanges();
                 }
+                    db.SaveChanges();
                 Session.Remove("Carrello");
                 return RedirectToAction("Index", " Home");
             }
@@ -56,24 +72,7 @@ namespace WaveTheCave.Controllers
             return View(db.Prenotazione.ToList());
         }
 
-        [Authorize(Roles = "Admin")]
-        public ActionResult Edit(int id)
-        {
-            return View(db.Prenotazione.Find(id));
-        }
-
-        [Authorize(Roles = "Admin")]
-        [HttpPost]
-        public ActionResult Edit(Prenotazione p)
-        {
-            if (ModelState.IsValid)
-            {
-                ModelDBContext db1 = new ModelDBContext();
-                db1.Entry(p).State = EntityState.Modified;
-                db1.SaveChanges();
-                return RedirectToAction("Index", "Prenotazione");
-            }
-            return View(p);
-        }
+       
+        
     }
 }

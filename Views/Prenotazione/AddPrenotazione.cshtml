@@ -1,4 +1,4 @@
-﻿@model WaveTheCave.Models.Prenotazione
+﻿@model WaveTheCave.Models.Cart
 
 @{
     ViewBag.Title = "AddPrenotazione";
@@ -11,18 +11,21 @@
         foreach (WaveTheCave.Models.Cart p in ViewBag.Carrello)
         {
             <div class="m-4">
-                <p class="fw-bold my-0">//@p.Nome</p>
-                <p class="my-0">//(@p.Quantita)</p>
-                <p class="my-0">// @p.OrariGrotte </p>
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Data, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.Data, new { htmlAttributes = new { @class = "form-control", type = "date" } })
-                        @Html.ValidationMessageFor(model => model.Data, "", new { @class = "text-danger" })
+                @using (Html.BeginForm("AddData", "Prenotazione", FormMethod.Post))
+                {
+                    @Html.HiddenFor(model=> model.IdGrotte)
+                    <p class="fw-bold my-0">//@p.Nome</p>
+                    <p class="my-0">//(@p.Quantita)</p>
+                    <p class="my-0">// @p.OrariGrotte </p>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Data, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Data, new { htmlAttributes = new { @class = "form-control", type = "date" } })
+                            @Html.ValidationMessageFor(model => model.Data, "", new { @class = "text-danger" })
+                        </div>
                     </div>
-                </div>
-
-
+                <input type="submit" value="Inserisci la data" class="btn my-2" />
+                }
 
 
             </div>
@@ -37,7 +40,7 @@
 
 
 
-    @using (Html.BeginForm())
+    @*@using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
 
@@ -53,7 +56,7 @@
                 </div>
             </div>
         </div>
-    }
+    }*@
 </div>
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

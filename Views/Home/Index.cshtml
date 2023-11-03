@@ -4,28 +4,33 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
-<div class="row flex-column flex-md-row">
+﻿@Styles.Render("~/Content/Site.css")
+<div class="row flex-column flex-md-row ">
     <div class="col col-md-9">
-        <h2 class="text-center">GROTTE</h2>
+        <h2 class="text-center p-4">Scegli quale grotta vuoi visitare:</h2>
         @foreach (var item in Model)
         {
-            <div class="card d-flex my-2 flex-column flex-md-row">
-                <img src="~/Content/assets/@item.Foto" class="card-img-top w-25" alt="@item.Nome">
+            <div class="card d-flex my-2 flex-column  mb-5 p-2">
+                
+                <div class=" tabellaGenerale d-flex row-cols-8 align-items-center">
+
+                    <div class="form-check me-4">
+                        <input id="checkbox1" type="checkbox">
+
+                    </div>
+                    <img src="~/Content/assets/@item.Foto" class=" Immagine card-img-top  " alt="@item.Nome">
                 <div class="card-body justify-content-between align-items-start row">
-                    <div class="d-flex flex-column mx-2 col">
+                    <div class="d-flex flex-column mx-2 col ms-5">
                         <h5 class="card-title">@item.Nome</h5>
                         <p class="card-text fst-italic">@item.Descrizione</p>
 
                         <p class="fw-bold mx-2">$@item.Prezzo</p>
                     </div>
-                   
                     <div class="mx-2 col">
                         @using (Html.BeginForm("AddToCart", "Home", FormMethod.Post))
                         {
                             <div class="form-group">
-                              
+
                                 <div class="form-group">
                                     <label for="IdOrari">Orari</label>
                                     @Html.DropDownList("IdOrari", new SelectList(ViewBag.IdOrari, "Value", "Text"), new { @class = "form-control" })
@@ -37,15 +42,19 @@
                             <input id="Quantita" name="Quantita" class="w-50 form-control" type="number" value="1" />
                             <input type="submit" value="Aggiungi" class="btn my-2" />
                         }
+                </div>
                     </div>
+
                 </div>
             </div>
+
         }
+
     </div>
     <div class="col col-md-3">
-        <h2 class="text-center">CARRELLO</h2>
-        <div class="card">
-            <div class="card-body">
+
+        <div class=" TabResoconto card  ms-5">
+            <div class="card-body ">
                 @if (ViewBag.Carrello != null)
                 {
                     for (int i = 0; i < ViewBag.Carrello.Count; i++)
@@ -55,7 +64,7 @@
                             <p class="fw-bold my-0">// @p.Nome</p>
                             <p class="my-0">// (@p.Quantita)</p>
                             <p class="my-0">// @p.OrariGrotte </p>
-                         
+
                             @Html.ActionLink("Rimuovi", "Remove", "Home", new { id = i }, new { @class = "btn my-2" })
                         </div>
                         <hr />
@@ -69,4 +78,8 @@
         </div>
     </div>
 </div>
+
+
+
+
 

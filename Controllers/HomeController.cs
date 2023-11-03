@@ -13,13 +13,14 @@ namespace WaveTheCave.Controllers
         public class HomeController : Controller
         {
             private static ModelDBContext db = new ModelDBContext();
+       
 
-        public List<Orari> orari = db.Orari.ToList();
         public List<SelectListItem> a
         {
             get
             {
-                List<SelectListItem> aList = new List<SelectListItem>();
+                 List<Orari> orari = db.Orari.ToList();
+                 List<SelectListItem> aList = new List<SelectListItem>();
                 foreach (Orari agg in orari)
                 {
                     SelectListItem item = new SelectListItem { Text = agg.OrariGrotte , Value = agg.IdOrari.ToString() };

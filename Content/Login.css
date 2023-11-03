@@ -1,0 +1,72 @@
+﻿body {
+}
+/*Contenitore\i login*/
+.contenitore {
+    margin-top:2%;
+}
+
+#registrati {
+    padding: 7% 13%;
+ 
+    border-left: 2px solid black;
+}
+#accedi {
+
+    padding: 1% 8%;
+}
+/*stile parte accedi*/
+.form-control{
+    margin-right:100px;
+}
+
+#bottoneA{
+    padding: 7px 50px;
+  
+}
+
+/*media*/
+@media (max-width: 995px) {
+    
+
+   
+
+    #accedi {
+       padding: 1% 5%;
+    }
+
+    
+
+}
+@media (max-width: 780px) {
+    .contenitore {
+        display: flex;
+        flex-direction: column;
+       
+        
+       
+    }
+    #registrati {
+        margin-top: 4%;
+        padding-top: 4%;
+        border-left: none;
+        padding: 0 20px;
+    }
+    #accedi {
+        margin-top: 4%;
+        border-bottom: 2px solid black;
+        padding-bottom:2%;
+    }
+   
+
+    .bottoneR {
+        max-width: 140px !important;
+        
+    }
+   
+}
+@media (max-width: 390px) {
+    #registrati {
+      
+        padding: 0 15px;
+    }
+}
