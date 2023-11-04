@@ -157,6 +157,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\assets\DetailsVento.jpg" />
     <Content Include="Content\assets\grotta-del-vento-lucca.jpg" />
     <Content Include="Content\assets\grotta-gigante.jpg" />
     <Content Include="Content\assets\grotte-di-borgio-verezzi.jpg" />
@@ -167,6 +168,11 @@
     <Content Include="Content\assets\grotte-di-stiffejpg.jpg" />
     <Content Include="Content\assets\grotte-di-toirano.jpg" />
     <Content Include="Content\assets\grotte-pastena.jpg" />
+    <Content Include="Content\assets\registrazine.gif" />
+    <Content Include="Content\assets\Vento.jpg" />
+    <Content Include="Content\assets\VentoS.jpg" />
+    <Content Include="Content\assets\VentoS2.jpg" />
+    <Content Include="Content\GrotteDelVento.css" />
     <Content Include="Content\Login.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -231,6 +237,8 @@
     <Content Include="Views\Prenotazione\AddPrenotazione.cshtml" />
     <Content Include="Views\Prenotazione\Index.cshtml" />
     <Content Include="Views\DetPrenotazione\Index.cshtml" />
+    <Content Include="Views\Grotte\GrottedelVento.cshtml" />
+    <Content Include="Views\Grotte\DetailsGrottedelVento.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

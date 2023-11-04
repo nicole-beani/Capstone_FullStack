@@ -50,4 +50,11 @@ textarea {
         .TabResoconto {
             margin: auto 10%;
         }
+        .firstContenitore {
+            display: flex !important;
+            flex-direction: column;
+            align-content: center;
+        }
     }
+
+    
