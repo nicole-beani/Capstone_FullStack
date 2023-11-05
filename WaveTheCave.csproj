@@ -159,7 +159,11 @@
   <ItemGroup>
     <Content Include="Content\assets\borgioVerezzi.jpg" />
     <Content Include="Content\assets\bossea.jpg" />
+    <Content Include="Content\assets\BV.jpg" />
+    <Content Include="Content\assets\BV2.jpg" />
     <Content Include="Content\assets\castellana.jpg" />
+    <Content Include="Content\assets\DetailsBV.jpg" />
+    <Content Include="Content\assets\DetailsBV2.jpg" />
     <Content Include="Content\assets\DetailsVento.jpg" />
     <Content Include="Content\assets\frasassi.jpg" />
     <Content Include="Content\assets\gigante.jpg" />

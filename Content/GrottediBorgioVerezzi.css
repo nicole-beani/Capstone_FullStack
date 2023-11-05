@@ -1,2 +1,8 @@
-﻿body {
+﻿
+img {
+    width: 100%;
+}
+
+.title {
+    color: #dc9047;
 }
