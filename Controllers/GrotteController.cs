@@ -20,11 +20,23 @@ namespace WaveTheCave.Controllers
         {
             return View(db.Grotte.ToList());
         }
+        public ActionResult LeGrotte()
+        {
+            return View();
+        }
         public ActionResult GrottedelVento()
         {
             return View();
         }
         public ActionResult DetailsGrottedelVento()
+        {
+            return View();
+        }
+        public ActionResult GrottediBorgioVerezzi()
+        {
+            return View();
+        }
+        public ActionResult DetailsGrottediBorgioVerezzi()
         {
             return View();
         }

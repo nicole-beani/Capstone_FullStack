@@ -157,7 +157,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\assets\borgioVerezzi.jpg" />
+    <Content Include="Content\assets\bossea.jpg" />
+    <Content Include="Content\assets\castellana.jpg" />
     <Content Include="Content\assets\DetailsVento.jpg" />
+    <Content Include="Content\assets\frasassi.jpg" />
+    <Content Include="Content\assets\gigante.jpg" />
     <Content Include="Content\assets\grotta-del-vento-lucca.jpg" />
     <Content Include="Content\assets\grotta-gigante.jpg" />
     <Content Include="Content\assets\grotte-di-borgio-verezzi.jpg" />
@@ -168,11 +173,18 @@
     <Content Include="Content\assets\grotte-di-stiffejpg.jpg" />
     <Content Include="Content\assets\grotte-di-toirano.jpg" />
     <Content Include="Content\assets\grotte-pastena.jpg" />
+    <Content Include="Content\assets\GVento.jpg" />
+    <Content Include="Content\assets\pastena.jpg" />
+    <Content Include="Content\assets\pertosaAuletta.jpg" />
     <Content Include="Content\assets\registrazine.gif" />
+    <Content Include="Content\assets\stiffe.jpg" />
+    <Content Include="Content\assets\toirano.jpg" />
     <Content Include="Content\assets\Vento.jpg" />
     <Content Include="Content\assets\VentoS.jpg" />
     <Content Include="Content\assets\VentoS2.jpg" />
     <Content Include="Content\GrotteDelVento.css" />
+    <Content Include="Content\GrottediBorgioVerezzi.css" />
+    <Content Include="Content\LeGrotte.css" />
     <Content Include="Content\Login.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -239,6 +251,9 @@
     <Content Include="Views\DetPrenotazione\Index.cshtml" />
     <Content Include="Views\Grotte\GrottedelVento.cshtml" />
     <Content Include="Views\Grotte\DetailsGrottedelVento.cshtml" />
+    <Content Include="Views\Grotte\LeGrotte.cshtml" />
+    <Content Include="Views\Grotte\DetailsGrottediBorgioVerezzi.cshtml" />
+    <Content Include="Views\Grotte\GrottediBorgioVerezzi.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

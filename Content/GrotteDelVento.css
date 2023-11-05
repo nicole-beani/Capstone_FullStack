@@ -1,6 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
-
+﻿
 body {
     background-color: #f9f9fa
 }
@@ -213,18 +211,3 @@ img{
           
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Marcellus SC', serif;
-    font-weight:600;
-}
-
-h6, p {
-    font-family: inherit;
-    font-weight:300;
-    font-size: 1.3em;
-}
-.card-text{
-    line-height:1.6em !important;
-    text-align:justify;
-    letter-spacing:0.1em;
-}

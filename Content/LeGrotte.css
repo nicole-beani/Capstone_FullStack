@@ -1,0 +1,43 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+.card {
+    width: 20%;
+    float: left;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 100%;
+    }
+}
+.symbol {
+    width: 50px; /* Imposta la larghezza desiderata dell'immagine */
+    height: 50px; /* Imposta l'altezza desiderata dell'immagine */
+    cursor: pointer;
+}
+
+.nav-link{
+    margin-left: 46%;
+}
+h1, h2, h3, h4, h5 {
+    font-family: 'Marcellus SC', serif;
+    font-weight: 600;
+}
+h4, .card-title{
+    margin:0;
+}
