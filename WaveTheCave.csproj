@@ -161,9 +161,13 @@
     <Content Include="Content\assets\bossea.jpg" />
     <Content Include="Content\assets\BV.jpg" />
     <Content Include="Content\assets\BV2.jpg" />
+    <Content Include="Content\assets\Cast.jpg" />
+    <Content Include="Content\assets\Cast2.jpg" />
     <Content Include="Content\assets\castellana.jpg" />
+    <Content Include="Content\assets\CastS.jpg" />
     <Content Include="Content\assets\DetailsBV.jpg" />
-    <Content Include="Content\assets\DetailsBV2.jpg" />
+    <Content Include="Content\assets\DetailsCast.jpg" />
+    <Content Include="Content\assets\DetailsCast2.jpg" />
     <Content Include="Content\assets\DetailsVento.jpg" />
     <Content Include="Content\assets\frasassi.jpg" />
     <Content Include="Content\assets\gigante.jpg" />
@@ -182,12 +186,17 @@
     <Content Include="Content\assets\pertosaAuletta.jpg" />
     <Content Include="Content\assets\registrazine.gif" />
     <Content Include="Content\assets\stiffe.jpg" />
+    <Content Include="Content\assets\To.jpg" />
+    <Content Include="Content\assets\To2.jpg" />
     <Content Include="Content\assets\toirano.jpg" />
+    <Content Include="Content\assets\ToS.jpg" />
+    <Content Include="Content\assets\ToS2.jpg" />
     <Content Include="Content\assets\Vento.jpg" />
     <Content Include="Content\assets\VentoS.jpg" />
     <Content Include="Content\assets\VentoS2.jpg" />
     <Content Include="Content\GrotteDelVento.css" />
     <Content Include="Content\GrottediBorgioVerezzi.css" />
+    <Content Include="Content\GrotteGenerale.css" />
     <Content Include="Content\LeGrotte.css" />
     <Content Include="Content\Login.css" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -258,6 +267,10 @@
     <Content Include="Views\Grotte\LeGrotte.cshtml" />
     <Content Include="Views\Grotte\DetailsGrottediBorgioVerezzi.cshtml" />
     <Content Include="Views\Grotte\GrottediBorgioVerezzi.cshtml" />
+    <Content Include="Views\Grotte\GrottediCastellana.cshtml" />
+    <Content Include="Views\Grotte\DetailsGrottediCastellana.cshtml" />
+    <Content Include="Views\Grotte\GrottediToirano.cshtml" />
+    <Content Include="Views\Grotte\DetailsGrottediToirano.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

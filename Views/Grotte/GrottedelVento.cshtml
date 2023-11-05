@@ -3,7 +3,7 @@
     ViewBag.Title = "GrottedelVento";
 }
 
-<h1 style="color: #51828a ">La Grotta del vento</h1>
+<h1 style="color: #51828a ">Le Grotte del Vento</h1>
 <br />
 <link href="~/Content/GrotteDelVento.css" rel="stylesheet" />
 <link href="~/Content/Site.css" rel="stylesheet" />
@@ -11,7 +11,7 @@
     <div class="row g-0 d-flex align-items-center  ">
         <div class="col me-5">
             <div class="card-body">
-                <h3 class="card-title">La Grotta</h3>
+                <h3 class="card-title">Le Grotte</h3>
                 <br />
                 <p class="card-text ">
                     Situata nel cuore del Parco delle Alpi Apuane, in una zona incontaminata di elevato valore paesaggistico e geomorfologico, la Grotta del Vento presenta diverse caratteristiche di unicità in quanto i suoi itinerari permettono l’osservazione diretta di ogni aspetto del carsismo profondo come gallerie vadose fossili o saltuariamente attive, condotte freatiche e ambienti definitivamente abbandonati dall’acqua nei quali è in atto delle formazioni calcaree di ogni genere, tutte vive, brillanti e ricche di colori.
@@ -86,4 +86,7 @@
         </div>
     </div>
 </div>
-
+<div>
+    <h3 class="mt-5">Scopri il suo itinerario</h3>
+    <button>@Html.ActionLink("Clicca qui!", "DetailsGrottedelVento", "Grotte", new { area = "" }, new { @class = "nav-link" })</button>
+</div>

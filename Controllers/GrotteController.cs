@@ -40,6 +40,22 @@ namespace WaveTheCave.Controllers
         {
             return View();
         }
+        public ActionResult GrottediCastellana()
+        {
+            return View();
+        }
+        public ActionResult DetailsGrottediCastellana()
+        {
+            return View();
+        }
+        public ActionResult GrottediToirano()
+        {
+            return View();
+        }
+        public ActionResult DetailsGrottediToirano()
+        {
+            return View();
+        }
         // GET: Grotte/Details/5
         public ActionResult Details(int? id)
         {
