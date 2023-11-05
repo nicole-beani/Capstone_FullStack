@@ -56,6 +56,14 @@ namespace WaveTheCave.Controllers
         {
             return View();
         }
+        public ActionResult GrottediPertosaAuletta()
+        {
+            return View();
+        }
+        public ActionResult DetailsGrottediPertosaAuletta()
+        {
+            return View();
+        }
         // GET: Grotte/Details/5
         public ActionResult Details(int? id)
         {

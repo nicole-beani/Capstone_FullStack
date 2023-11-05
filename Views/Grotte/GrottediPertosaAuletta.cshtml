@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "GrottediPertosaAuletta";
+}
+
+<h1 style="color: #a290f2 ">Le Grotte di Pertosa Auletta</h1>
+<br />
+
+<link href="~/Content/GrotteGenerale.css" rel="stylesheet" />
+<link href="~/Content/Site.css" rel="stylesheet" />
+<div class=" mb-3">
+    <div class="row g-0 d-flex align-items-center  ">
+        <div class="col me-5">
+            <div class="card-body">
+                <h3 class="card-title">Le Grotte</h3>
+                <br />
+                <p class="card-text ">
+                    Situate nel massiccio dei Monti Alburni, le Grotte di Pertosa-Auletta sono uno dei geositi focali del Geoparco “Cilento” e presentano due unicità:
+                </p>
+            
+                    <p class="card-text "> - Sono le uniche grotte in Italia dove è possibile navigare un fiume sotterraneo, il Negro;
+                <br />
+                    - Ma sono anche le sole in Europa a conservare i resti di un villaggio palafitticolo risalente al II millennio a.C.</p>
+
+                <p class="card-text ">
+                    Con le loro guide, la visita alle grotte turisticamente attrezzate (percorsi segnati e comodi) ed illuminate da un impianto di ultima generazione, si trasforma in una piacevole avventura. Il fiume offre un affascinante ed inconsueto viaggio in barca, immersi in un silenzio magico, interrotto soltanto dal fragore degli scrosci della cascata sotterranea.
+                </p>
+
+
+            </div>
+        </div>
+
+        <div class="col-md-6 ">
+            <img src="~/Content/assets/Per.jpg"
+                 class="img-fluid " />
+        </div>
+    </div>
+</div>
+<br />
+<div class=" my-3">
+    <div class="row g-0 d-flex align-items-center  ">
+        <div class="col-md-5 me-5">
+            <img src="~/Content/assets/PerS2.jpg"
+                 class="img-fluid " />
+        </div>
+        <div class="col me-5">
+            <div class="card-body">
+                <h3 class="card-title">La Scoperta</h3>
+                <p class="card-text ">
+                    Nel 1898, Giovanni Patroni e Paolo Carucci condussero le prime indagini archeologiche nelle Grotte di Pertosa Auletta. Patroni esplorò l'ampia antegrotta, scoprendo una stratigrafia articolata e numerosi reperti umani di diverse epoche.
+                </p>
+                <p class="card-text ">
+                    Emerse una struttura di legno simile a una palafitta, che portò alla luce testimonianze dell'età ellenistico-romana e protostorica.
+                </p>
+                <p class="card-text ">
+                    Le ricerche di Carucci si concentrarono sul lembo terroso a destra dell'antegrotta, rivelando una seconda palafitta a una profondità di 2,80 metri.
+                </p>
+               
+
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div>
+    <div class="row g-0 d-flex align-items-center mb-5">
+        <div class="col me-5">
+            <div class="card-body">
+                <p class="card-text ">
+                    Le indagini archeologiche più recenti del 2009 e del 2013 hanno rivelato che il sito è stato trasformato a causa della costruzione di una banchina per turisti e di una diga idroelettrica, che ha sommerso il sito archeologico di circa 2 metri.
+                </p>
+                <p class="card-text ">
+                    Nonostante ciò, le ricerche hanno dimostrato che la palafitta si estende lungo il margine sinistro dell'antegrotta, anche in ambienti oscuri. Le datazioni radiocarboniche indicano che la palafitta risale alla metà del II millennio a.C.
+                </p>
+
+                <p class="card-text ">
+                    Le Grotte di Pertosa Auletta costituiscono una preziosa fonte di informazioni sul primo popolamento della Valle del Tangro, preservate grazie alle caratteristiche carsiche dell'ambiente circostante.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-5 ">
+            <img src="~/Content/assets/PerS.jpg"
+                 class="img-fluid " />
+        </div>
+    </div>
+</div>
+<div>
+    <h3 class="mt-5">Scopri il suo itinerario</h3>
+    <button>@Html.ActionLink("Clicca qui!", "DetailsGrottediPertosaAuletta", "Grotte", new { area = "" }, new { @class = "nav-link" })</button>
+</div>
+
