@@ -4,15 +4,33 @@
     ViewBag.Title = "Login";
 }
 ﻿@Styles.Render("~/Content/Login.css")
-<h2 class="text-center">Login</h2>
+<style>
 
-<div class="contenitore d-flex justify-content-center  ">
+    body {
+        background-image: url(https://travel.thewom.it/content/uploads/sites/4/2022/09/grotte-di-frasassi_2.jpeg) !important;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+
+    }
+    h1{
+        font-size:3.4em;
+    }
+
+</style>
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+<div class="bg-black rounded-4 bg-opacity-50">
+<h1 class=" text-center text-light ">Login</h1>
+<div class="contenitore d-flex justify-content-center bg-black rounded-4 rounded-top-0 bg-opacity-25 text-light ">
     <div id="accedi">
         @using (Html.BeginForm())
         {
             @Html.AntiForgeryToken()
 
             <div class="form-horizontal">
+
                 <h3>Sono già cliente</h3>
             
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -37,7 +55,7 @@
 
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Login" id="bottoneA" class="btn btn-default full-width border border-2 border-black mt-3 " />
+                        <input type="submit" value="Accedi" id="bottoneA" class="btn btn-default full-width border border-2 border-light text-light mt-3 " />
                     </div>
                 </div>
             </div>
@@ -45,10 +63,10 @@
     </div>
     <div id="registrati">
         <h3>Nuovo cliente? </h3>
-       @Html.ActionLink("Registrati", "SignIn", "Auth", new { area = "" }, new { @class = " bottoneR nav-link btn btn-default  border border-2 border-black mt-2 p-2" })
+       @Html.ActionLink("Registrati", "SignIn", "Auth", new { area = "" }, new { @class = " bottoneR nav-link btn btn-default  border border-2 border-light mt-2 p-2" })
     </div>
 </div>
-
+    </div>
 
 
 

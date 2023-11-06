@@ -4,7 +4,23 @@
     ViewBag.Title = "SignIn";
 }
 ﻿@Styles.Render("~/Content/Site.css")
-<h2 >Registrazione</h2>
+
+<style>
+
+    body {
+        background-image: url(https://travel.thewom.it/content/uploads/sites/4/2022/09/grotte-di-frasassi_2.jpeg) !important;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+    }
+
+    h1 {
+        font-size: 3.4em;
+    }
+</style>
+<link href="~/Content/Site.css" rel="stylesheet" />
+<h1 class=" text-center text-light " >Registrazione</h1>
 <hr />
 
 @using (Html.BeginForm())
@@ -57,7 +73,7 @@
             </div>
         </div>
     </div>
-    <div class="col-6 d-flex align-items-center justify-content-start"><img class="w-100" src="~/Content/assets/registrazine.gif"/></div>
+    
         </div>
 }
 
