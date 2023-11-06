@@ -64,6 +64,14 @@ namespace WaveTheCave.Controllers
         {
             return View();
         }
+        public ActionResult GrottediStiffe()
+        {
+            return View();
+        }
+        public ActionResult DetailsGrottediStiffe()
+        {
+            return View();
+        }
         // GET: Grotte/Details/5
         public ActionResult Details(int? id)
         {

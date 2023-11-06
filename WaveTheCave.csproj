@@ -169,6 +169,7 @@
     <Content Include="Content\assets\DetailsCast.jpg" />
     <Content Include="Content\assets\DetailsCast2.jpg" />
     <Content Include="Content\assets\DetailsPer.jpg" />
+    <Content Include="Content\assets\DetailsSti.jpg" />
     <Content Include="Content\assets\DetailsVento.jpg" />
     <Content Include="Content\assets\frasassi.jpg" />
     <Content Include="Content\assets\gigante.jpg" />
@@ -189,7 +190,9 @@
     <Content Include="Content\assets\PerS2.jpg" />
     <Content Include="Content\assets\pertosaAuletta.jpg" />
     <Content Include="Content\assets\registrazine.gif" />
+    <Content Include="Content\assets\Sti.jpg" />
     <Content Include="Content\assets\stiffe.jpg" />
+    <Content Include="Content\assets\StiS.jpg" />
     <Content Include="Content\assets\To.jpg" />
     <Content Include="Content\assets\To2.jpg" />
     <Content Include="Content\assets\toirano.jpg" />
@@ -277,6 +280,8 @@
     <Content Include="Views\Grotte\DetailsGrottediToirano.cshtml" />
     <Content Include="Views\Grotte\GrottediPertosaAuletta.cshtml" />
     <Content Include="Views\Grotte\DetailsGrottediPertosaAuletta.cshtml" />
+    <Content Include="Views\Grotte\GrottediStiffe.cshtml" />
+    <Content Include="Views\Grotte\DetailsGrottediStiffe.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

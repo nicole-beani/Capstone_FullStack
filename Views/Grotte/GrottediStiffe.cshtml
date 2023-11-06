@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "GrottediStiffe";
+}
+
+<h1 style="color: #271605 ">Le Grotte di Stiffe</h1>
+<br />
+
+<link href="~/Content/GrotteGenerale.css" rel="stylesheet" />
+<link href="~/Content/Site.css" rel="stylesheet" />
+<div class=" mb-3">
+    <div class="row g-0 d-flex align-items-center  ">
+        <div class="col me-5">
+            <div class="card-body">
+                <h3 class="card-title">Le Grotte</h3>
+                <br />
+                <p class="card-text ">
+                    Le grotte di Stiffe sono un complesso di grotte carsiche situate nei pressi di Stiffe, nel territorio del comune di San Demetrio ne' Vestini (AQ), in Abruzzo, ricomprese all'interno del parco naturale regionale Sirente-Velino.
+                </p>
+                <p class="card-text ">
+                    Entrando nella grotta i sensi sono di colpo investiti dall’ambiente inusuale:
+                </p>
+                <p class="card-text ">
+                    le fresca temperatura ed i giochi di luce trascinano la mente a ritroso nel tempo; <br /> le gocce che cadono fanno rivivere il fenomeno dello stillicidio che ha dato forma alle insolite stalattiti e stalagmiti; <br />la vista si concentra sull’acqua che spumeggia sotto le passerelle, e si perde in lontananza per catturare ogni dettaglio delle concrezioni, con il fiume che fa da guida rumorosa dall’ingresso della grotta, nascondendosi quel tanto che basta per far sentire il silenzio, per poi tornare ad esibirsi con tutta la sua potenza, soprattutto d’inverno, in una maestosa sala dove, precipitando con fragorosa cascata, offre uno spettacolo splendido ed inquietante.
+
+
+                </p>
+
+
+
+            </div>
+        </div>
+
+        <div class="col-md-6 ">
+            <img src="~/Content/assets/Sti.jpg"
+                 class="img-fluid " />
+        </div>
+    </div>
+</div>
+<br />
+<div class=" my-3">
+    <div class="row g-0 d-flex align-items-center  ">
+        <div class="col-md-5 me-5">
+            <img src="~/Content/assets/StiS.jpg"
+                 class="img-fluid " />
+        </div>
+        <div class="col me-5">
+            <div class="card-body">
+                <h3 class="card-title">La Scoperta</h3>
+                <p class="card-text ">
+                    La risorgenza di Stiffe è conosciuta da molti anni dagli abitanti del luogo, infatti esistono documenti che ne fanno risalire la conoscenza dei primi ambienti in tempi molto lontani.
+                </p>
+                <p class="card-text ">
+                    Proprio la presenza di un copioso corso d’acqua all’interno della grotta ha permesso, agli inizi del XX secolo, la costruzione di una centrale idroelettrica: alimentata dalle acque trasportate a valle per mezzo di una condotta forzata, di cui qualche tratto è ancora visibile in prossimità dell’ingresso, ed ha costituito fonte di energia sino alla sua distruzione avvenuta durante la seconda guerra mondiale.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+
+<div>
+    <h3 class="mt-5">Scopri il suo itinerario</h3>
+    <button>@Html.ActionLink("Clicca qui!", "DetailsGrottediStiffe", "Grotte", new { area = "" }, new { @class = "nav-link" })</button>
+</div>
+
+
