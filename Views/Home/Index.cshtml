@@ -1,9 +1,7 @@
 ﻿@model IEnumerable<WaveTheCave.Models.Grotte>
-
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Index2";
 }
-
 ﻿@Styles.Render("~/Content/Site.css")
 <div class="row flex-column flex-md-row ">
     <div class="col col-md-9">
@@ -11,49 +9,38 @@
         @foreach (var item in Model)
         {
             <div class="card d-flex my-2 flex-column  mb-5 p-2">
-                
+
                 <div class=" tabellaGenerale d-flex align-items-center">
 
-                    <div class="form-check me-4">
-                        <input id="checkbox1" type="checkbox">
-
-                    </div>
                     <img src="~/Content/assets/@item.Foto" class=" Immagine card-img-top  " alt="@item.Nome">
-                <div class="card-body justify-content-between align-items-start row">
-                    <div class="d-flex flex-column mx-2 col ms-5">
-                        <h5 class="card-title">@item.Nome</h5>
-                        <p class="card-text fst-italic">@item.Descrizione</p>
-                        <label for="IdOrari">Orari</label>
-                        @Html.DropDownList("IdGrotte", null, htmlAttributes: new { @class = "form-control" })
-                        <p class="fw-bold mx-2">$@item.Prezzo</p>
-                    </div>
-                    <div class="mx-2 col">
-                        @using (Html.BeginForm("AddToCart", "Home", FormMethod.Post))
-                        {
-                            <div class="form-group">
+                    <div class="card-body justify-content-between align-items-start row">
+                        <div class="d-flex flex-column mx-2 col ms-5">
+                            <h5 class="card-title">@item.Nome</h5>
+                            <p class="card-text fst-italic">@item.Descrizione</p>
 
+                            <p class="fw-bold mx-2">$@item.Prezzo</p>
+                        </div>
+                        <div class="mx-2 col">
+                            @using (Html.BeginForm("AddToCart", "Home", FormMethod.Post))
+                            {
                                 <div class="form-group">
-                                    <label for="IdOrari">Orari</label>
-                                    @Html.DropDownList("IdOrari", new SelectList(ViewBag.IdOrari, "Value", "Text"), new { @class = "form-control" })
+                                    <div class="form-group">
+                                        <label for="IdOrari">Orari</label>
+                                        @Html.DropDownList("IdOrari", new SelectList(ViewBag.IdOrari, "Value", "Text"), new { @class = "form-control" })
+                                    </div>
                                 </div>
-                            </div>
-                            @Html.Hidden("IdGrotte", item.IdGrotte)
-
-                            <label for="Quantita">Quantità</label>
-                            <input id="Quantita" name="Quantita" class="w-50 form-control" type="number" value="1" />
-                            <input type="submit" value="Aggiungi" class="btn my-2" />
-                        }
-                </div>
+                                @Html.Hidden("IdGrotte", item.IdGrotte)
+                                <label for="Quantita">Quantità</label>
+                                <input id="Quantita" name="Quantita" class="w-50 form-control" type="number" value="1" />
+                                <input type="submit" value="Aggiungi" class="btn my-2" />
+                            }
+                        </div>
                     </div>
-
                 </div>
             </div>
-
         }
-
     </div>
     <div class="col col-md-3">
-
         <div class=" TabResoconto card  ms-5">
             <div class="card-body ">
                 @if (ViewBag.Carrello != null)
@@ -65,7 +52,6 @@
                             <p class="fw-bold my-0">// @p.Nome</p>
                             <p class="my-0">// (@p.Quantita)</p>
                             <p class="my-0">// @p.OrariGrotte </p>
-
                             @Html.ActionLink("Rimuovi", "Remove", "Home", new { id = i }, new { @class = "btn my-2" })
                         </div>
                         <hr />
@@ -79,8 +65,5 @@
         </div>
     </div>
 </div>
-
-
-
 
 
