@@ -45,5 +45,11 @@ namespace WaveTheCave.Models
            
         }
 
+        public Prenotazione(DateTime data, decimal importo, int idUser)
+        {
+            Data = data;
+            Importo = importo;
+            IdUser = idUser;
+        }
     }
 }

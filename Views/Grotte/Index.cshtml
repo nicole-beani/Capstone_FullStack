@@ -6,9 +6,9 @@
 
 <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
 <table class="table">
     <tr>
         <th>
@@ -26,26 +26,29 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Descrizione)
-        </td>
-        <td>
-            <img class="w-25" src="~/Content/assets/@item.Foto" />
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Prezzo)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdGrotte }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdGrotte }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdGrotte })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descrizione)
+            </td>
+            <td>
+                <img class="w-25" src="~/Content/assets/@item.Foto" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prezzo)
+            </td>
+            <td>
+              
+                    @Html.ActionLink("Edit", "Edit", new { id = item.IdGrotte })
+                    @Html.ActionLink("Details", "Details", new { id = item.IdGrotte })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.IdGrotte })
+               
+            </td>
+        </tr>
+    }
 
 </table>

@@ -7,6 +7,7 @@
 
 <h3 class="text-center">Carrello</h3>
 <div class="card">
+               
     @if (lista != null)
     {
         foreach (WaveTheCave.Models.Cart p in lista)
@@ -17,7 +18,7 @@
                     @Html.Hidden("IdGrotte", p.IdGrotte)
                     <p class="fw-bold my-0">//@p.Nome</p>
                     <p class="my-0">//(@p.Quantita)</p>
-                    <p class="my-0">// @p.OrariGrotte </p>
+                    
                     <div class="form-group">
                         @Html.LabelFor(model => model.Data, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">

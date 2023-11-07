@@ -56,7 +56,7 @@ namespace WaveTheCave.Controllers
 
                 foreach (Cart item in ViewBag.Carrello)
                 {
-                    Prenotazione d = new Prenotazione(item.Data, item.Importo, item.IdOrari, item.IdUser);
+                    Prenotazione d = new Prenotazione(item.Data, item.Importo, item.IdUser);
                     db.Prenotazione.Add(d);
                 }
                     db.SaveChanges();
