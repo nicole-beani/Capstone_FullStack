@@ -31,7 +31,8 @@ namespace WaveTheCave.Controllers
         }
         public ActionResult Index()
             {
-                ViewBag.Title = "Home Page";
+            ViewBag.IdGrotte = new SelectList(db.Grotte, "IdGrotte", "Nome");
+            ViewBag.Title = "Home Page";
             ViewBag.IdOrari = a ;
             ViewBag.Carrello = Session["Carrello"];
                 return View(db.Grotte.ToList());

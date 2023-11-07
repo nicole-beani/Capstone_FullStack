@@ -23,7 +23,8 @@
                     <div class="d-flex flex-column mx-2 col ms-5">
                         <h5 class="card-title">@item.Nome</h5>
                         <p class="card-text fst-italic">@item.Descrizione</p>
-
+                        <label for="IdOrari">Orari</label>
+                        @Html.DropDownList("IdGrotte", null, htmlAttributes: new { @class = "form-control" })
                         <p class="fw-bold mx-2">$@item.Prezzo</p>
                     </div>
                     <div class="mx-2 col">

@@ -2,18 +2,19 @@
 
 @{
     ViewBag.Title = "AddPrenotazione";
+    List<WaveTheCave.Models.Cart> lista = Session["Carrello"] as List<WaveTheCave.Models.Cart>;
 }
 
 <h3 class="text-center">Carrello</h3>
 <div class="card">
-    @if (ViewBag.Carrello != null)
+    @if (lista != null)
     {
-        foreach (WaveTheCave.Models.Cart p in ViewBag.Carrello)
+        foreach (WaveTheCave.Models.Cart p in lista)
         {
             <div class="m-4">
                 @using (Html.BeginForm("AddData", "Prenotazione", FormMethod.Post))
                 {
-                    @Html.HiddenFor(model=> model.IdGrotte)
+                    @Html.Hidden("IdGrotte", p.IdGrotte)
                     <p class="fw-bold my-0">//@p.Nome</p>
                     <p class="my-0">//(@p.Quantita)</p>
                     <p class="my-0">// @p.OrariGrotte </p>
@@ -24,7 +25,7 @@
                             @Html.ValidationMessageFor(model => model.Data, "", new { @class = "text-danger" })
                         </div>
                     </div>
-                <input type="submit" value="Inserisci la data" class="btn my-2" />
+                    <input type="submit" value="Inserisci la data" class="btn my-2" />
                 }
 
 
@@ -32,7 +33,7 @@
             <hr />
         }
         <div class="d-flex flex-column mx-4">
-            <p class="fw-bold">Totale: $@WaveTheCave.Models.Cart.CalcoloCostoTotale(ViewBag.Carrello)</p>
+            <p class="fw-bold">Totale: $@WaveTheCave.Models.Cart.CalcoloCostoTotale(lista)</p>
 
         </div>
     }
@@ -40,7 +41,7 @@
 
 
 
-    @*@using (Html.BeginForm())
+    @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
 
@@ -56,7 +57,7 @@
                 </div>
             </div>
         </div>
-    }*@
+    }
 </div>
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

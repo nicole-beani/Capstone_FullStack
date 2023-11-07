@@ -19,23 +19,23 @@ namespace WaveTheCave.Controllers
         // GET: Prenotazione
         public ActionResult AddPrenotazione()
         {
-            ViewBag.Carrello = Session["Carrello"];
+            
           
             return View();
         }
         [HttpPost]
-        public ActionResult AddData (Cart c) 
+        public ActionResult AddData(Cart c)
         {
-            List<Cart> lista = ViewBag.Carrello;
+            List<Cart> lista = Session["Carrello"] as List<Cart>; 
 
-         foreach(Cart item in lista)
+            foreach (Cart item in lista)
             {
                 if (item.IdGrotte == c.IdGrotte)
                 {
                     item.Data = c.Data;
                 }
             }
-          ViewBag.Carrello = lista;
+          Session["Carrello"] = lista;
             return RedirectToAction("AddPrenotazione");
         }
 
