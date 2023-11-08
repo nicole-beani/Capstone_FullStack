@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "GrottediPastena";
+}
+
+<h1 style="color: #8c8179 ">Le Grotte di Pastena</h1>
+<br />
+
+<link href="~/Content/GrotteGenerale.css" rel="stylesheet" />
+<link href="~/Content/Site.css" rel="stylesheet" />
+<div class=" mb-3">
+    <div class="row g-0 d-flex align-items-center  ">
+        <div class="col me-5">
+            <div class="card-body">
+                <h3 class="card-title">Le Grotte</h3>
+                <br />
+                <p class="card-text ">
+                    Inserite all’interno del Parco Naturale Regionale Monti Ausoni e Lago di Fondi, le Grotte di Pastena sono definite tecnicamente come “grotte di attraversamento”, completamente percorribili (il ramo attivo solo da speleologi) dall’inghiottitoio fino alla risorgenza.
+                </p>
+                <p class="card-text ">
+                    L’inghiottitoio (l’attuale antro d’ingresso) nel quale si gettano le acque del fosso Mastro, è conosciuto da sempre dalla popolazione locale: alto 20 m e largo 12 m, le testimonianze del suo utilizzo, fin dalla preistoria, sono numerose.
+                </p>
+
+
+
+            </div>
+        </div>
+
+        <div class="col-md-6 ">
+            <img src="~/Content/assets/Cast.jpg"
+                 class="img-fluid " />
+        </div>
+    </div>
+</div>
+<br />
+<div class=" my-3">
+    <div class="row g-0 d-flex align-items-center  ">
+        <div class="col-md-6 me-5">
+            <img src="~/Content/assets/Cast2.jpg"
+                 class="img-fluid " />
+        </div>
+        <div class="col me-5">
+            <div class="card-body">
+                <p class="card-text ">
+                    Vi sono due percorsi principali costituiti da un ramo attivo inferiore e da un ramo fossile superiore, ed è considerato tra i maggiori complessi speleologici della penisola e consente di ammirare le più interessanti forme del carsismo sotterraneo:
+                </p>
+                <p class="card-text ">
+                    maestose e suggestive sale, stalattiti, stalagmiti e colonne dalle forme bizzarre, laghetti e nelle stagioni più piovose fragorose cascate, che rendono la visita alle grotte un’esperienza emozionante.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div>
+    <div class="row g-0 d-flex align-items-center mb-5">
+        <div class="col me-5">
+            <div class="card-body">
+                <h3 class="card-title">La Scoperta</h3>
+                <p class="card-text ">
+                    Furono scoperte nel 1926 dal barone Carlo Franchetti e divenute turistiche già l'anno successivo, sono gestite dal Consorzio Grotte Pastena e Collepardo.
+                </p>
+                <p class="card-text ">
+                    Negli anni '70 il geologo Lamberto Ferri Ricchi completò l'esplorazione di tutto il percorso sotterraneo nel corso d'acqua.
+                </p>
+                <p class="card-text ">
+                    Durante la seconda guerra mondiale le grotte furono usate come rifugio contro i bombardamenti.
+                </p>
+
+            </div>
+        </div>
+
+        <div class="col-md-5 ">
+            <img src="~/Content/assets/CastS.jpg"
+                 class="img-fluid " />
+        </div>
+    </div>
+</div>
+<div>
+    <h3 class="mt-5">Scopri il suo itinerario</h3>
+    <button>@Html.ActionLink("Clicca qui!", "DetailsGrottediPastena", "Grotte", new { area = "" }, new { @class = "nav-link" })</button>
+</div>
+

@@ -202,6 +202,7 @@
     <Content Include="Content\assets\VentoS2.jpg" />
     <Content Include="Content\GrotteDelVento.css" />
     <Content Include="Content\GrottediBorgioVerezzi.css" />
+    <Content Include="Content\GrottediPastena.css" />
     <Content Include="Content\GrotteGenerale.css" />
     <Content Include="Content\HomeGrotte.css" />
     <Content Include="Content\LeGrotte.css" />
@@ -282,6 +283,14 @@
     <Content Include="Views\Grotte\DetailsGrottediStiffe.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Index2.cshtml" />
+    <Content Include="Views\Grotte\GrottediPastena.cshtml" />
+    <Content Include="Views\Grotte\DetailsGrottediPastena.cshtml" />
+    <Content Include="Views\Grotte\GrottediFrasassi.cshtml" />
+    <Content Include="Views\Grotte\DetailsGrottediFrasassi.cshtml" />
+    <Content Include="Views\Grotte\GrottediBossea.cshtml" />
+    <Content Include="Views\Grotte\DetailsGrottediBossea.cshtml" />
+    <Content Include="Views\Grotte\GrottaGigante.cshtml" />
+    <Content Include="Views\Grotte\DetailsGrottaGigante.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

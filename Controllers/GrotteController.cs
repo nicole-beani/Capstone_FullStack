@@ -20,55 +20,117 @@ namespace WaveTheCave.Controllers
         {
             return View(db.Grotte.ToList());
         }
+
         public ActionResult LeGrotte()
         {
             return View();
         }
+
+
         public ActionResult GrottedelVento()
         {
             return View();
         }
+
         public ActionResult DetailsGrottedelVento()
         {
             return View();
         }
+
+
         public ActionResult GrottediBorgioVerezzi()
         {
             return View();
         }
+
         public ActionResult DetailsGrottediBorgioVerezzi()
         {
             return View();
         }
+
+
         public ActionResult GrottediCastellana()
         {
             return View();
         }
+
         public ActionResult DetailsGrottediCastellana()
         {
             return View();
         }
+
+
         public ActionResult GrottediToirano()
         {
             return View();
         }
+
         public ActionResult DetailsGrottediToirano()
         {
             return View();
         }
+
+
         public ActionResult GrottediPertosaAuletta()
         {
             return View();
         }
+
         public ActionResult DetailsGrottediPertosaAuletta()
         {
             return View();
         }
+
+
         public ActionResult GrottediStiffe()
         {
             return View();
         }
+
         public ActionResult DetailsGrottediStiffe()
+        {
+            return View();
+        }
+
+
+        public ActionResult GrottediPastena()
+        {
+            return View();
+        }
+
+        public ActionResult DetailsGrottediPastena()
+        {
+            return View();
+        }
+
+
+        public ActionResult GrottediFrasassi()
+        {
+            return View();
+        }
+
+        public ActionResult DetailsGrottediFrasassi()
+        {
+            return View();
+        }
+
+
+        public ActionResult GrottediBossea()
+        {
+            return View();
+        }
+
+        public ActionResult DetailsGrottediBossea()
+        {
+            return View();
+        }
+
+
+        public ActionResult GrottaGigante()
+        {
+            return View();
+        }
+        public ActionResult DetailsGrottaGigante()
         {
             return View();
         }
