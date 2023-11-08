@@ -59,7 +59,7 @@ namespace WaveTheCave.Controllers
                     Prenotazione d = new Prenotazione(item.Data, item.Importo, item.IdUser);
                     db.Prenotazione.Add(d);
                 }
-                    db.SaveChanges();
+                    
                 Session.Remove("Carrello");
                 return RedirectToAction("Index", " Home");
             }

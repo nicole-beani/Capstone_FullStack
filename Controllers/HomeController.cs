@@ -13,7 +13,7 @@ namespace WaveTheCave.Controllers
         public class HomeController : Controller
         {
             private static ModelDBContext db = new ModelDBContext();
-        public ActionResult Index2()
+        public ActionResult Index()
         {
 
             ViewBag.Title = "Home Page";
@@ -21,7 +21,7 @@ namespace WaveTheCave.Controllers
             return View();
         }
        
-        public ActionResult Index()
+        public ActionResult Index2()
         {
            
             ViewBag.IdGrotte = new SelectList(db.Grotte, "IdGrotte", "Nome");
@@ -38,14 +38,14 @@ namespace WaveTheCave.Controllers
             List<Cart> carrello = Session["Carrello"] as List<Cart> ?? new List<Cart>();
             carrello.Add(cartItem);
             Session["Carrello"] = carrello;
-            return RedirectToAction("Index");
+            return RedirectToAction("Index2", "Home");
         }
         public ActionResult Remove(int id)
         {
             List<Cart> carrello = Session["Carrello"] as List<Cart>;
             carrello.RemoveAt(id);
             Session["Carrello"] = carrello;
-            return RedirectToAction("Index");
+            return RedirectToAction("Index2", "Home");
         }
 
     }

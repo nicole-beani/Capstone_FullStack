@@ -1,65 +1,76 @@
-﻿
+﻿@model IEnumerable<WaveTheCave.Models.Grotte>
+@{
+    ViewBag.Title = "Index";
+}
+    ﻿@Styles.Render("~/Content/Site.css")
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <div class="row flex-column flex-md-row ">
+        <div class="col col-md-9">
+            <h2 class="text-center p-4">Scegli quale grotta vuoi visitare:</h2>
+            @foreach (var item in Model)
+            {
+                <div class="card d-flex my-2 flex-column  mb-5 p-2">
 
-<h2>ESPLORA CON LA VISITA VIRTUALE:</h2>
-<div class="row">
-    <div class="col-md-12">
-        <h3> LE GROTTE DI BOSSEA</h3>
-        <p>
-            <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!4v1593069226142!6m8!1m7!1sCAoSLEFGMVFpcE9iMnRmVjFIUEtGX1FvT1R3YjNFUUtiMjZzNkwtVVlITm9rVk1Q!2m2!1d44.24211330994096!2d7.839995916962721!3f183.35!4f2.7099999999999937!5f0.4000000000000002" width="1100" height="500" frameborder="0" style="border: 0; width: 100%; height: 500px;" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
-        </p>
+
+
+                    <div class=" tabellaGenerale d-flex align-items-center">
+                    <div class="checkbox-wrapper-39 me-3">
+                        <label>
+                            <input type="checkbox" />
+                            <span class="checkbox "></span>
+                        </label>
+                    </div>
+
+                        <img src="~/Content/assets/@item.Foto" class=" Immagine card-img-top  " alt="@item.Nome">
+                        <div class="card-body justify-content-between align-items-start row">
+                            <div class="d-flex flex-column mx-2 col mx-5">
+                                <h5 class="card-title">@item.Nome</h5>
+                                <div class="card-text fst-italic">@item.Descrizione</div>
+
+                                <p class="fw-bold mx-2">$@item.Prezzo</p>
+                            </div>
+                            <div class="mx-2 col">
+                                @using (Html.BeginForm("AddToCart", "Home", FormMethod.Post))
+                                {
+
+                                    @Html.Hidden("IdGrotte", item.IdGrotte)
+                                    <label for="Quantita">Quantità</label>
+                                    <input id="Quantita" name="Quantita" class="w-50 form-control" type="number" value="1" />
+                                    <input type="submit" value="Aggiungi" class="btn my-2" />
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="col col-md-3">
+            <div class=" TabResoconto card  ms-5">
+                <div class="card-body ">
+                    @if (ViewBag.Carrello != null)
+                    {
+                        for (int i = 0; i < ViewBag.Carrello.Count; i++)
+                        {
+                            WaveTheCave.Models.Cart p = ViewBag.Carrello[i];
+                            <div>
+                                <p class="fw-bold my-0">// @p.Nome</p>
+                                <p class="my-0">// (@p.Quantita)</p>
+
+                                @Html.ActionLink("Rimuovi", "Remove", "Home", new { id = i }, new { @class = "btn my-2" })
+                            </div>
+                            <hr />
+                        }
+                        <div class="d-flex flex-column  align-items-md-center">
+                            <p class="fw-bold">Totale: $@WaveTheCave.Models.Cart.CalcoloCostoTotale(ViewBag.Carrello)</p>
+                            @Html.ActionLink("Prenota", "AddPrenotazione", "Prenotazione", "", new { @class = "btn" })
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-12">
-        <h3> LE GROTTE DI FRASASSI</h3>
-        <p>
-            <iframe loading="lazy" src="https://ldmultimedia.net/ldm/panoramicheVR360/Grotte_di_Frasassi/virtualtour.html" width="1100" height="500" frameborder="0" style="border: 0 ;width: 100%; height: 500px;" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
-        </p>
-    </div>
-    <div class="col-md-12">
-        <h3> LA GROTTA DEL VENTO</h3>
-        <p>
-            <iframe loading="lazy" src="https://www.marcostucchi.com/Panoramiche/VirtualTour/grottadelvento/tour.html?startscene=scene_GrottaDelVento_03" width="1100" height="500" frameborder="0" style="border: 0; width: 100%; height: 500px;" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
-        </p>
-    </div>
-    <div class="col-md-12">
-        <h3> LE GROTTE DI PERTOSA-AULETTA</h3>
-        <p>
-            <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!4v1699399835345!6m8!1m7!1sCAoSLEFGMVFpcFA5YVExQ0ZXU0RuY3dlT1p5VmcyQXd0N2YzZ3VsZ05IMjBBSVIx!2m2!1d40.53636086174537!2d15.45531535596342!3f216.32271!4f0!5f0.7820865974627469" width="1100" height="500" frameborder="0" style="border: 0; width: 100%; height: 500px;" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
-        </p>
-    </div>
-    <div class="col-md-12">
-        <h3> LA GROTTA GIGANTE</h3>
-        <p>
-            <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!4v1699399274964!6m8!1m7!1sCAoSLEFGMVFpcE5ZZmFvTVJwQW1mdG5iWTZtaG9HcE45M2toejdzQ2JibkVNY0x6!2m2!1d45.709815!2d13.764169!3f195.04!4f-28.130000000000003!5f1.6362491326456432" width="1100" height="500" frameborder="0" style="border: 0; width: 100%; height: 500px;" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
-        </p>
-    </div>
-    <div class="col-md-12">
-        <h3> LE GROTTE DI BORGIO VEREZZI </h3>
-        <p>
-            <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!4v1699399608244!6m8!1m7!1sCAoSK0FGMVFpcE5oRGVxd0xqaHYtMlJkOXoxTXJLTkdGbkJ0MWFXZzdXZHdJM3c.!2m2!1d44.1623645!2d8.3044995!3f249.84!4f-22.47!5f0.4000000000000002" width="1100" height="500" frameborder="0" style="border: 0; width: 100%; height: 500px;" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
-        </p>
-    </div>
-    <div class="col-md-12">
-        <h3> LE GROTTE DI CASTELLANA</h3>
-        <p>
-            <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!4v1699399517737!6m8!1m7!1sCAoSLEFGMVFpcE5TSGFWVmY0Qm82akNYRlpBMmhTeVNzZ3RJc0J3bUd5ZFItOEM3!2m2!1d40.87590549999999!2d17.1484251!3f269.88!4f22.319999999999993!5f0.7820865974627469" width="1100" height="500" frameborder="0" style="border: 0; width: 100%; height: 500px;" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
-        </p>
-    </div>
-    <div class="col-md-12">
-        <h3> LE GROTTE DI TOIRANO</h3>
-        <p>
-            <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!4v1699399435924!6m8!1m7!1sCAoSLEFGMVFpcE5odXBHb1V2eW9LUDRLOXdhcDVnVzZNemV4TkZ3TDZ4bWRyX3hH!2m2!1d44.1359155!2d8.2001393!3f228.22!4f-1.8499999999999943!5f0.4000000000000002" width="1100" height="500" frameborder="0" style="border: 0; width: 100%; height: 500px;" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
-        </p>
-    </div>
-    <div class="col-md-12">
-        <h3> LE GROTTE DI STIFFE</h3>
-        <p>
-            <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!4v1699399369254!6m8!1m7!1sCAoSLEFGMVFpcE9qOVZNUVlIOFlmU0NVVV9hQWhycHh5OTg2Zk5CcFhGNGdzN1FG!2m2!1d42.2543065!2d13.54128141!3f193.38!4f-8.040000000000006!5f0.4000000000000002" width="1100" height="500" frameborder="0" style="border: 0; width: 100%; height: 500px;" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
-        </p>
-    </div>
-    <div class="col-md-12">
-        <h3> LE GROTTE DI PASTENA</h3>
-        <p>
-            <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!4v1699399134498!6m8!1m7!1sCAoSLEFGMVFpcE9TOUozQ2JNc283TEFSU052YndfcW81Ulp4bldNZEREYXdvWXpL!2m2!1d41.4965597!2d13.489569!3f294.2686478018972!4f1.2947606745006794!5f0.7820865974627469" width="1100" height="500" frameborder="0" style="border: 0; width: 100%; height: 500px;" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
-        </p>
-    </div>
-</div>
+
+
+
+
+
