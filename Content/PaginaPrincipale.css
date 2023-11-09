@@ -1,6 +1,5 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-/* Reseting */
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +14,7 @@ body {
     justify-content: center;
 }
 
+/* 3 card*/
 .container {
     transform-style: preserve-3d;
 }
@@ -65,23 +65,120 @@ body {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: #000000;
+                
                 backface-visibility: hidden;
                 transform-style: preserve-3d;
                 transform: rotateY(180deg);
             }
-
+#content1 {
+    background-image: src(https://www.turismofvg.it/proxyvfs.axd/image_hd/r42163/ph_archivio_grotta_gigante_grande_caverna_2-jpg?v=277550&ext=.jpg);
+}
+#content2 {
+    background-image: src(https://www.viaggioinbaule.it/wp-content/uploads/2021/08/grotte-di-frasassi.jpg)
+}
+#content3 {
+    background-image: src(https://www.ciociariaturismo.it/wp-content/uploads/2006/04/grotte_pastena2021_cop-900x600.jpg)
+}
         .container .box:hover .body {
             transform: rotateY(180deg);
         }
 
         .container .box .body .content div {
+            
             transform-style: preserve-3d;
             padding: 20px;
-            background: linear-gradient(45deg, #FE0061,#FFEB3B);
+            background: linear-gradient(45deg, #fff,#b9982f);
             transform: translateZ(100px);
         }
 
             .container .box .body .content div h3 {
                 letter-spacing: 1px;
             }
+/*Video*/
+.contenitore {
+    position: relative;
+    width: 100%;
+    padding-bottom: 43.25%; 
+    overflow: hidden;
+}
+
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 100%;
+}
+
+   
+    .video-container video {
+        width: 90%;
+        height: 60%;
+        object-fit: cover;
+    }
+
+
+.text-overlay {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4vw; 
+    text-align: center;
+    width: 70%;
+}
+@media only screen and (max-width: 770px) {
+    .text-overlay {
+        width: 90%;
+        top: 56%;
+    }
+
+        .text-overlay h1 {
+            font-size: 20px;
+           
+            
+        }
+
+        .text-overlay h4 {
+            font-size: 14px;
+        }
+}
+/* BACKGROUND MOVE */
+.button-background-move {
+    font-size: 1.2em;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+    .button-background-move:after {
+        content: "";
+        background-color: #fff;
+        width: 100%;
+        z-index: -1;
+        position: absolute;
+        height: 100%;
+        top: 7px;
+        left: 7px;
+        transition: 0.2s;
+    }
+
+    .button-background-move:hover:after {
+        top: 0px;
+        left: 0px;
+    }
+
+@media (min-width: 768px) {
+    .button-background-move {
+        padding: 13px 50px 13px;
+    }
+}

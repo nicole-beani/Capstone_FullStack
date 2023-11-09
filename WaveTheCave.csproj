@@ -156,9 +156,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\assets\3687824-adventure-camera-digital-image-photo_108804.png" />
-    <Content Include="Content\assets\3687831-adventure-journey-location-map_108802.png" />
-    <Content Include="Content\assets\4211457-adventure-backpack-luggage-suitcase-travelling_115506.png" />
     <Content Include="Content\assets\borgioVerezzi.jpg" />
     <Content Include="Content\assets\bossea.jpg" />
     <Content Include="Content\assets\BV.jpg" />
@@ -203,7 +200,7 @@
     <Content Include="Content\assets\Vento.jpg" />
     <Content Include="Content\assets\VentoS.jpg" />
     <Content Include="Content\assets\VentoS2.jpg" />
-    <Content Include="Content\assets\_degrees_icon_213545.png" />
+    <Content Include="Content\assets\video.mp4" />
     <Content Include="Content\GrotteDelVento.css" />
     <Content Include="Content\GrottediBorgioVerezzi.css" />
     <Content Include="Content\GrottediPastena.css" />
@@ -272,7 +269,6 @@
     <Content Include="Views\Auth\Login.cshtml" />
     <Content Include="Views\Auth\SignIn.cshtml" />
     <Content Include="Views\Prenotazione\AddPrenotazione.cshtml" />
-    <Content Include="Views\Prenotazione\Index.cshtml" />
     <Content Include="Views\Grotte\GrottedelVento.cshtml" />
     <Content Include="Views\Grotte\DetailsGrottedelVento.cshtml" />
     <Content Include="Views\Grotte\LeGrotte.cshtml" />
