@@ -9,7 +9,6 @@ namespace WaveTheCave.Controllers
 {
     
     
-        [Authorize(Roles = "Admin,User")]
         public class HomeController : Controller
         {
             private static ModelDBContext db = new ModelDBContext();
@@ -20,7 +19,8 @@ namespace WaveTheCave.Controllers
 
             return View();
         }
-       
+
+        [Authorize(Roles = "Admin,User")]
         public ActionResult Index2()
         {
            

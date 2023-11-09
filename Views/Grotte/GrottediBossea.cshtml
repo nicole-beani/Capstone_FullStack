@@ -3,8 +3,63 @@
     ViewBag.Title = "GrottediBossea";
 }
 
-<h2>ESPLORA CON LA VISITA VIRTUALE:</h2>
+
+
+<br />
+<h1 style="color: #a290f2 " class="mt-5 text-center">Le Grotte di Bossea</h1>
+<h3>ESPLORA CON LA VISITA VIRTUALE:</h3>
 <p>
     <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!4v1593069226142!6m8!1m7!1sCAoSLEFGMVFpcE9iMnRmVjFIUEtGX1FvT1R3YjNFUUtiMjZzNkwtVVlITm9rVk1Q!2m2!1d44.24211330994096!2d7.839995916962721!3f183.35!4f2.7099999999999937!5f0.4000000000000002" width="1100" height="500" frameborder="0" style="border: 0; width: 100%; height: 500px;" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
 </p>
+<link href="~/Content/GrotteGenerale.css" rel="stylesheet" />
+<link href="~/Content/Site.css" rel="stylesheet" />
+<div class=" mb-3">
+    <div class="row g-0 d-flex align-items-center  ">
+        <div class="col me-5">
+            <div class="card-body">
+                <h3 class="card-title">Le Grotte</h3>
+                <br />
+                <p class="card-text ">
+                    Le grotte di Bossea, in val Corsaglia, a Frabosa Soprana, sono tra le più importanti e imponenti grotte turistiche d’Italia, sia per la loro ricchezza geologica, per il loro fascino e per i numerosi resti paleontologici che vi sono stati rinvenuti. 2 km di gallerie ad un livello di 700 metri di altezza, con ambienti diversi, numerose meraviglie come macigni, colonne stalagmitiche e stalattitiche, concrezioni calcaree, laghi e torrenti sotterranei.
+                </p>
+
+              
+
+            </div>
+        </div>
+
+        <div class="col-md-6 ">
+            <img src="~/Content/assets/Per.jpg"
+                 class="img-fluid " />
+        </div>
+    </div>
+</div>
+<br />
+<div class=" my-3">
+    <div class="row g-0 d-flex align-items-center  ">
+        <div class="col-md-5 me-5">
+            <img src="~/Content/assets/PerS2.jpg"
+                 class="img-fluid " />
+        </div>
+        <div class="col me-5">
+            <div class="card-body">
+                <h3 class="card-title">La Scoperta</h3>
+                <p class="card-text ">
+                    La cavità è stata scoperta intorno al 1850 e da allora è stata via via esplorata dagli speleologi ben oltre la zona attualmente visitabile. Fin dalle prime esplorazioni furono ritrovati numerosi resti di Ursus spelaeus, l’orso della caverne, che frequentava la cavità fra gli 80.000 e i 12.000 anni fa: nella parte finale del percorso, una teca contiene la ricostruzione di uno scheletro intero di orso.
+                </p>
+                <p class="card-text ">
+                    Prima grotta italiana aperta al pubblico, nel lontano 1874, Bossea ha infatti uno sviluppo considerevole, con circa 3 chilometri di lunghezza totali e una successione di grandi ambienti i cosiddetti “saloni”. Le esplorazioni si susseguirono fino a concludersi sostanzialmente nel 1949, ma la grotta è ancora frequentata da gruppi speleologici, decisi a scoprirne ogni angolo. Dal 1874 è disponibile un impianto di illuminazione interna.
+                </p>
+                <p class="card-text ">
+                    </p>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+
+<div>
+    <h3 class="mt-5">Scopri il suo itinerario</h3>
+    <button>@Html.ActionLink("Clicca qui!", "DetailsGrottediBossea", "Grotte", new { area = "" }, new { @class = "nav-link" })</button>
+</div>
 

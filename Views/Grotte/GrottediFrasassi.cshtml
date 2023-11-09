@@ -3,7 +3,72 @@
     ViewBag.Title = "GrottediFrasassi";
 }
 
+
+
+<br />
+<h1 style="color: #271605 " class="mt-5 text-center">Le Grotte di Frasassi</h1>
 <p>
     <iframe loading="lazy" src="https://ldmultimedia.net/ldm/panoramicheVR360/Grotte_di_Frasassi/virtualtour.html" width="1100" height="500" frameborder="0" style="border: 0 ;width: 100%; height: 500px;" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
 </p>
+<link href="~/Content/GrotteGenerale.css" rel="stylesheet" />
+<link href="~/Content/Site.css" rel="stylesheet" />
+<div class=" mb-3">
+    <div class="row g-0 d-flex align-items-center  ">
+        <div class="col me-5">
+            <div class="card-body">
+                <h3 class="card-title">Le Grotte</h3>
+                <br />
+                <p class="card-text ">
+                    Le Grotte di Frasassi costituiscono un complesso di grotte carsiche situato nella regione delle Marche, in Italia.
+                </p>
+                <p class="card-text ">
+                    Questo sistema di grotte è rinomato per la sua estensione, le formazioni calcaree spettacolari e l'ambiente suggestivo che offre ai visitatori.
+                </p>
+                <p class="card-text ">
+                    Le grotte sono costituite da una serie di camere sotterranee, passaggi e gallerie decorate da stalattiti e stalagmiti di varie forme e dimensioni.
+                </p>
 
+
+
+            </div>
+        </div>
+
+        <div class="col-md-6 ">
+            <img src="~/Content/assets/Sti.jpg"
+                 class="img-fluid " />
+        </div>
+    </div>
+</div>
+<br />
+<div class=" my-3">
+    <div class="row g-0 d-flex align-items-center  ">
+        <div class="col-md-5 me-5">
+            <img src="~/Content/assets/StiS.jpg"
+                 class="img-fluid " />
+        </div>
+        <div class="col me-5">
+            <div class="card-body">
+                <h3 class="card-title">La Scoperta</h3>
+                <p class="card-text ">
+                    La scoperta delle Grotte di Frasassi avvenne nel 1971 grazie a Rolando Silvestri che scalando il monte Valmontagnana si accorse di alcuni fori sul terreno.
+                </p>
+                <p class="card-text ">
+                    Una spedizione del Gruppo Speleologico Marchigiano CAI di Ancona guidata da Giancarlo Cappanera scoprì la porta d’ingresso della grotta, battezzata Grotta Grande del Vento.Il gruppo non riusci a scendere fino alla base della cavità completamente buia.
+                </p>
+                <p class="card-text ">
+                   Si scoprì poi che la sua altezza effettiva è il doppio, 240 metri.
+                    Le scoperte si susseguirono negli anni facendo emergere numerosi ambienti di diverse tipologie e dimensioni:
+                </p>
+                <p class="card-text ">
+                    - Concrezioni straordinarie, laghetti sotterranei profondi anche 25 metri, forme arabeggianti cristalline e sculture naturali formate dalle stratificazioni calcaree nel corso delle ere.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+
+<div>
+    <h3 class="mt-5">Scopri il suo itinerario</h3>
+    <button>@Html.ActionLink("Clicca qui!", "DetailsGrottediFrasassi", "Grotte", new { area = "" }, new { @class = "nav-link" })</button>
+</div>
