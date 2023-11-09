@@ -1,2 +1,104 @@
-﻿
+﻿<link href="~/Content/PaginaPrincipale.css" rel="stylesheet" />
+<div class="bg-black text-light p-5">
+    <div class="mt-5 pt-5 pb-5 text-center">
+        <h1>Benvenuto a Wave The Cave</h1>
+        <h4>Tra le pareti della storia e della bellezza: un'esperienza sotterranea indimenticabile ti attende.</h4>
+        <button class="mt-5 ">@Html.ActionLink("Esplora", "LeGrotte", "Grotte", new { area = "" }, new { @class = "nav-link " })</button>
+    </div>
+</div>
+<div class="my-4">
+    <div class="container d-flex align-items-center justify-content-center flex-wrap">
+        <div class="box">
+            <div class="body">
+                <div class="imgContainer">
+                    <img src="https://www.turismofvg.it/proxyvfs.axd/image_hd/r42163/ph_archivio_grotta_gigante_grande_caverna_2-jpg?v=277550&ext=.jpg" alt="">
+                </div>
+                <div class="content d-flex flex-column align-items-center justify-content-center">
+                    <div>
+                        <h3 class="text-white fs-5"> Grotta Gigante</h3>
+                        <button>@Html.ActionLink("Scopri di più", "GrottaGigante", "Grotte", new { area = "" }, new { @class = "nav-link" })</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="body">
+                <div class="imgContainer">
+                    <img src="https://www.viaggioinbaule.it/wp-content/uploads/2021/08/grotte-di-frasassi.jpg" alt="">
+                </div>
+                <div class="content d-flex flex-column align-items-center justify-content-center">
+                    <div>
+                        <h3 class="text-white fs-5">Grotte di Frasassi</h3>
+                        <button>@Html.ActionLink("Scopri di più", "GrottediFrasassi", "Grotte", new { area = "" }, new { @class = "nav-link" })</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="body">
+                <div class="imgContainer">
+                    <img src="https://www.ciociariaturismo.it/wp-content/uploads/2006/04/grotte_pastena2021_cop-900x600.jpg" alt="">
+                </div>
+                <div class="content d-flex flex-column align-items-center justify-content-center">
+                    <div>
+                        <h3 class="text-white fs-5">Grotte di Pastena</h3>
+                        <button>@Html.ActionLink("Scopri di più", "GrottediPastena", "Grotte", new { area = "" }, new { @class = "nav-link" })</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="mt-5 pt-5 pb-5 text-center">
+        <h2>Chi siamo</h2>
+        <p>Benvenuti nel nostro portale dedicato alle meraviglie sotterranee d'Italia. <br />Siamo un team appassionato e dedicato che si impegna a portare alla luce la bellezza nascosta delle grotte più affascinanti del paese. Attraverso la nostra esperienza unica di visualizzazione a 360 gradi, vi offriamo la possibilità di immergervi completamente nelle profondità delle grotte italiane, consentendovi di esplorare ogni dettaglio e sentirne l'atmosfera unica...</p>
+        <h5>@Html.ActionLink("Continua a leggere", "ChiSiamo", "Home", new { area = "" }, new { @class = "nav-link " })</h5>
 
+    </div>
+</div>
+<div class="row  m-5">
+    <h2 class="text-center my-5 ">
+        OFFRIAMO
+    </h2>
+    <div class="col-md-3 d-flex justify-content-center">
+        <div >
+            <img src="~/Content/assets/4211457-adventure-backpack-luggage-suitcase-travelling_115506.png"  >
+            <div class="card-title">
+                <div class="text-center mt-3">
+                    <p>Avventura</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 d-flex justify-content-center">
+        <div >
+            <img src="~/Content/assets/_degrees_icon_213545.png"  >
+            <div class="card-title text-center ">
+            </div>
+            <div class="text-center mt-3">
+                <p>Vista a 360°</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 d-flex justify-content-center">
+        <div >
+            <img src="~/Content/assets/3687824-adventure-camera-digital-image-photo_108804.png" >
+            <div class="card-title text-center ">
+            </div>
+            <div class="text-center mt-3">
+                <p>Gallerie</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 d-flex justify-content-center">
+        <div >
+            <img src="~/Content/assets/3687831-adventure-journey-location-map_108802.png"  >
+            <div class="card-title text-center">
+            </div>
+            <div class="text-center mt-3">
+                <p>Esperienze</p>
+            </div>
+        </div>
+    </div>
+</div>

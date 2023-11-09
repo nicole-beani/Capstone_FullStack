@@ -156,6 +156,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\assets\3687824-adventure-camera-digital-image-photo_108804.png" />
+    <Content Include="Content\assets\3687831-adventure-journey-location-map_108802.png" />
+    <Content Include="Content\assets\4211457-adventure-backpack-luggage-suitcase-travelling_115506.png" />
     <Content Include="Content\assets\borgioVerezzi.jpg" />
     <Content Include="Content\assets\bossea.jpg" />
     <Content Include="Content\assets\BV.jpg" />
@@ -200,6 +203,7 @@
     <Content Include="Content\assets\Vento.jpg" />
     <Content Include="Content\assets\VentoS.jpg" />
     <Content Include="Content\assets\VentoS2.jpg" />
+    <Content Include="Content\assets\_degrees_icon_213545.png" />
     <Content Include="Content\GrotteDelVento.css" />
     <Content Include="Content\GrottediBorgioVerezzi.css" />
     <Content Include="Content\GrottediPastena.css" />
@@ -223,6 +227,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\PaginaPrincipale.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -291,6 +296,8 @@
     <Content Include="Views\Grotte\DetailsGrottediBossea.cshtml" />
     <Content Include="Views\Grotte\GrottaGigante.cshtml" />
     <Content Include="Views\Grotte\DetailsGrottaGigante.cshtml" />
+    <Content Include="Views\Prenotazione\Pagamento.cshtml" />
+    <Content Include="Views\Home\ChiSiamo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

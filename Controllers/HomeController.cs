@@ -47,6 +47,9 @@ namespace WaveTheCave.Controllers
             Session["Carrello"] = carrello;
             return RedirectToAction("Index2", "Home");
         }
-
+        public ActionResult ChiSiamo()
+        {
+            return View();
+        }
     }
 }

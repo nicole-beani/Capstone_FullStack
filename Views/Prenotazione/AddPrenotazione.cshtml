@@ -7,7 +7,7 @@
 
 <h3 class="text-center">Carrello</h3>
 <div class="card">
-               
+
     @if (lista != null)
     {
         foreach (WaveTheCave.Models.Cart p in lista)
@@ -18,9 +18,9 @@
                     @Html.Hidden("IdGrotte", p.IdGrotte)
                     <p class="fw-bold my-0">//@p.Nome</p>
                     <p class="my-0">//(@p.Quantita)</p>
-                    
-                  
-                    
+
+
+
                 }
 
 
@@ -45,12 +45,8 @@
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
 
+            <button >@Html.ActionLink("Termina e Paga", "Pagamento", "Prenotazione", new { area = "" }, new { @class = "nav-link" })</button>
 
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Effettua la prenotazione" class="btn m-4" />
-                </div>
-            </div>
         </div>
     }
 </div>
