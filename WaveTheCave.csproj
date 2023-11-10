@@ -157,6 +157,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\assets\borgioVerezzi.jpg" />
+    <Content Include="Content\assets\Bos.jpg" />
+    <Content Include="Content\assets\BosS.jpg" />
     <Content Include="Content\assets\bossea.jpg" />
     <Content Include="Content\assets\BV.jpg" />
     <Content Include="Content\assets\BV2.jpg" />
@@ -164,14 +166,19 @@
     <Content Include="Content\assets\Cast2.jpg" />
     <Content Include="Content\assets\castellana.jpg" />
     <Content Include="Content\assets\CastS.jpg" />
+    <Content Include="Content\assets\DetailsBos.jpg" />
     <Content Include="Content\assets\DetailsBV.jpg" />
     <Content Include="Content\assets\DetailsCast.jpg" />
     <Content Include="Content\assets\DetailsCast2.jpg" />
-    <Content Include="Content\assets\DetailsPer.jpg" />
     <Content Include="Content\assets\DetailsSti.jpg" />
     <Content Include="Content\assets\DetailsVento.jpg" />
+    <Content Include="Content\assets\Fra.jpg" />
+    <Content Include="Content\assets\FraS.jpg" />
     <Content Include="Content\assets\frasassi.jpg" />
+    <Content Include="Content\assets\Gig.jpg" />
+    <Content Include="Content\assets\Gig2.jpg" />
     <Content Include="Content\assets\gigante.jpg" />
+    <Content Include="Content\assets\GigS.jpg" />
     <Content Include="Content\assets\grotta-del-vento-lucca.jpg" />
     <Content Include="Content\assets\grotta-gigante.jpg" />
     <Content Include="Content\assets\grotte-di-borgio-verezzi.jpg" />
@@ -183,10 +190,25 @@
     <Content Include="Content\assets\grotte-di-toirano.jpg" />
     <Content Include="Content\assets\grotte-pastena.jpg" />
     <Content Include="Content\assets\GVento.jpg" />
+    <Content Include="Content\assets\imgChiSiamo.jpg" />
+    <Content Include="Content\assets\Pas.jpg" />
+    <Content Include="Content\assets\Pas2.jpg" />
+    <Content Include="Content\assets\PasS.jpg" />
     <Content Include="Content\assets\pastena.jpg" />
     <Content Include="Content\assets\Per.jpg" />
+    <Content Include="Content\assets\percorso1.jpg" />
+    <Content Include="Content\assets\percorso2.jpg" />
+    <Content Include="Content\assets\percorso3.jpg" />
+    <Content Include="Content\assets\percorso4.jpg" />
     <Content Include="Content\assets\PerS.jpg" />
     <Content Include="Content\assets\PerS2.jpg" />
+    <Content Include="Content\assets\Pertosa1.jpg" />
+    <Content Include="Content\assets\Pertosa2.jpg" />
+    <Content Include="Content\assets\Pertosa3.jpg" />
+    <Content Include="Content\assets\Pertosa4.jpg" />
+    <Content Include="Content\assets\Pertosa5.jpg" />
+    <Content Include="Content\assets\Pertosa6.jpg" />
+    <Content Include="Content\assets\Pertosa7.jpg" />
     <Content Include="Content\assets\pertosaAuletta.jpg" />
     <Content Include="Content\assets\registrazine.gif" />
     <Content Include="Content\assets\Sti.jpg" />
@@ -201,6 +223,7 @@
     <Content Include="Content\assets\VentoS.jpg" />
     <Content Include="Content\assets\VentoS2.jpg" />
     <Content Include="Content\assets\video.mp4" />
+    <Content Include="Content\ChiSiamo.css" />
     <Content Include="Content\GrotteDelVento.css" />
     <Content Include="Content\GrottediBorgioVerezzi.css" />
     <Content Include="Content\GrottediPastena.css" />

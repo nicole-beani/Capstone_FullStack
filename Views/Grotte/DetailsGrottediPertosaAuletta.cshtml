@@ -3,21 +3,78 @@
     ViewBag.Title = "DetailsGrottediPertosaAuletta";
 }
 
-<h1>Itinerario dettagliato</h1>
 <link href="~/Content/Site.css" rel="stylesheet" />
 <link href="~/Content/GrotteGenerale.css" rel="stylesheet" />
-<div class=" mb-3">
-    <p class="card-text ">
+<div class=" col-12 pt-5 mt-5 mb-3  ">
+    <div >
+    <h1>Itinerario dettagliato </h1>
+        <p class="card-text ">
         Le Grotte si estendono per circa tremila metri nel massiccio dei Monti Alburni, in un percorso ricco di concrezioni, dove stalattiti e stalagmiti decorano ogni spazio con forme, colori e dimensioni diverse, suscitando stupore ed emozione.
     </p>
-    <div class="d-flex align-items-center justify-content-center">
-        <div class="col-md-7 d-flex justify-content-center ">
-            <img src="~/Content/assets/DetailsPer.jpg" />
-        </div>
-    </div>
     <p class="card-text ">
         Si possono visitare le grotte con una visita guidata da 1 ora con il suggestivo tratto in barca sul fiume sotterraneo e con la visita di ambienti pieni di fascino e dai nomi suggestivi come Sala delle Meraviglie, Belvedere, Grande Sala, Sala del Trono, Sala dell’Unione con il “bacio” tra stalattite e stalagmite.
     </p>
+        </div>
+    <div class=" my-3  text-center">
+        <div class="row justify-content-center">
+
+            <div class="col-md-6  mx-auto text-center" id="colonna1">
+
+
+                <div id="carousel" class="carousel slide  ">
+
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-bs-target="#carousel" data-bs-slide-to="0" class="d-block carousel-slide carousel-image mx-auto active" alt="Image 1"></li>
+                        <li data-bs-target="#carousel" data-bs-slide-to="1" class="d-block carousel-slide carousel-image mx-auto" alt="Image 2"></li>
+                        <li data-bs-target="#carousel" data-bs-slide-to="2" class="d-block  carousel-slide carousel-image mx-auto" alt="Image 3"></li>
+                        <li data-bs-target="#carousel" data-bs-slide-to="3" class="d-block  carousel-slide carousel-image mx-auto" alt="Image 4"></li>
+                        <li data-bs-target="#carousel" data-bs-slide-to="4" class="d-block   carousel-slide carousel-image mx-auto" alt="Image 5"></li>
+                        <li data-bs-target="#carousel" data-bs-slide-to="5" class="d-block  carousel-slide carousel-image mx-auto" alt="Image 6"></li>
+                        <li data-bs-target="#carousel" data-bs-slide-to="6" class="d-block  carousel-slide carousel-image mx-auto" alt="Image 7"></li>
+
+                        <!-- Add more indicators for additional images -->
+                    </ol>
+                    <!-- Slides -->
+                    <div class="carousel-inner ">
+                        <div class="carousel-item active ">
+                            <img src="~/Content/assets/Pertosa1.jpg" class="d-block w-100 " alt="Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Content/assets/Pertosa2.jpg" class="d-block w-100 " alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Content/assets/Pertosa3.jpg" class="d-block w-100 " alt="Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Content/assets/Pertosa4.jpg" class="d-block w-100 " alt="Image 4">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Content/assets/Pertosa5.jpg" class="d-block w-100 " alt="Image 5">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Content/assets/Pertosa6.jpg" class="d-block w-100 " alt="Image 6">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Content/assets/Pertosa7.jpg" class="d-block w-100 " alt="Image 7">
+                        </div>
+
+                        <!-- Add more carousel items for additional images -->
+                    </div>
+                    <!-- Controls -->
+                    <a class="carousel-control-prev" href="#carousel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 </div>
 
