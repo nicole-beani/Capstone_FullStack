@@ -254,3 +254,19 @@ h6, p {
             margin-top: 2em;
         }
 }
+ /*footer*/
+footer {
+    background-color: #0b0b0b;
+    color: #fff;
+    
+    text-align: center;
+}
+
+
+
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+
