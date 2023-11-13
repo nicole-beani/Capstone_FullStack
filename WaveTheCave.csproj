@@ -121,6 +121,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\DetPrenotazioneController.cs" />
     <Compile Include="Controllers\GrotteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrariController.cs" />
@@ -320,6 +321,8 @@
     <Content Include="Views\Home\ChiSiamo.cshtml" />
     <Content Include="Views\Prenotazione\ResocontoPrenotazione.cshtml" />
     <Content Include="Views\Prenotazione\CreateResocontoPrenotazione.cshtml" />
+    <Content Include="Views\DetPrenotazione\Create.cshtml" />
+    <Content Include="Views\DetPrenotazione\ResocontoDetPrenotazione.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
