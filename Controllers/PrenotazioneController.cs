@@ -19,8 +19,6 @@ namespace WaveTheCave.Controllers
         // GET: Prenotazione
         public ActionResult AddPrenotazione()
         {
-            
-          
             return View();
         }
         [HttpPost]
@@ -76,6 +74,31 @@ namespace WaveTheCave.Controllers
         { 
         return View();
                 }
-        
+        public ActionResult ResocontoPrenotazione( string IdUser, string IdOrari)
+        {
+            var prenotazione = db.Prenotazione.Include(Prenotazione => Prenotazione.IdUser).Include(Prenotazione => Prenotazione.IdOrari);
+            ViewData["IdUser"] = new SelectList(db.User, "Nome", "Nome");
+            ViewData["IdOrari"] = new SelectList(db.Orari, "OrariGrotte", "OrariGrotte");
+            return View(db.Prenotazione.ToList());
+        }
+        public ActionResult CreateResocontoPrenotazione()
+        {
+            ViewBag.IdUser = new SelectList(db.User, "IdUser", "Nome");
+            ViewBag.IdOrari = new SelectList(db.Orari, "IdOrari", "OrariGrotte");
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "IdPrenotazione,Data, Importo, IdOrari, IdUser")] Prenotazione p)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Prenotazione.Add(p);
+                db.SaveChanges();
+                return RedirectToAction("ResocontoPrenotazione","Prenotazione");
+            }
+
+            return View(p);
+        }
     }
 }

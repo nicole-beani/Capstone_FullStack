@@ -31,15 +31,16 @@
                 }
                 else if (User.IsInRole("User"))
                 {
-                    <ul class="navbar-nav flex-grow-1  d-flex justify-content-end ">
-                        <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                        <li>@Html.ActionLink("Chi Siamo", "ChiSiamo", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                        <li>@Html.ActionLink("Le Grotte", "LeGrotte", "Grotte", new { area = "" }, new { @class = "nav-link" })</li>
-                        <li>@Html.ActionLink("Prenotazione", "Index2", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                        <li>@Html.ActionLink("Tariffe", "#", "#", new { area = "" }, new { @class = "nav-link" })</li>
-                        <li>@Html.ActionLink("Logout", "Logout", "Auth", new { area = "" }, new { @class = "nav-link" })</li>
+            <ul class="navbar-nav flex-grow-1  d-flex justify-content-end ">
+                <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Chi Siamo", "ChiSiamo", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Le Grotte", "LeGrotte", "Grotte", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Prenotazione", "Index2", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Tariffe", "#", "#", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Logout", "Logout", "Auth", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("si", "ResocontoPrenotazione", "Prenotazione", new { area = "" }, new { @class = "nav-link" })</li>
 
-                    </ul>
+            </ul>
                 }
                 else
                 {
@@ -65,7 +66,7 @@
                 <div class="row justify-content-center mb-0 pt-5 pb-0 row-2 px-3 py-0">
                     <div class="col-12">
                         <div class="row row-2">
-                            <div class="col-sm-3 text-md-center">
+                            <div class="col-sm-4 text-md-center">
                                 <h5>
                                     <span>
                                         <img src="~/Content/assets/logo.jpg" alt="Logo" class="logo">
@@ -74,9 +75,9 @@
                                 </h5>
                             </div>
 
-                            <div class="col-sm-3  my-sm-0 mt-5 d-flex flex-column justify-content-center "><ul class="list-unstyled"><li style="color: #bb9b34;" class="mt-0">-</li><li class="mt-0">Home</li><li>Chi Siamo</li><li>Le Grotte</li></ul></div>
-                            <div class="col-sm-3  my-sm-0 mt-5 d-flex flex-column justify-content-center"><ul class="list-unstyled"><li style="color: #bb9b34;" class="mt-0">-</li><li class="mt-0">Tariffe</li><li>Prenotazione</li><li>x</li></ul></div>
-                            <div class="col-sm-3  my-sm-0 mt-5 d-flex flex-column justify-content-center"><ul class="list-unstyled"><li style="color: #bb9b34;" class="mt-0">-</li><li class="mt-0">Cookie</li><li>Privacy Policy</li></ul></div>
+                            <div class="col-sm-4  my-sm-0 mt-5 d-flex flex-column justify-content-center "><ul class="list-unstyled"><li style="color: #bb9b34;" class="mt-0">-</li><li class="mt-0">Home</li><li>Chi Siamo</li><li>Le Grotte</li></ul></div>
+                            <div class="col-sm-4  my-sm-0 mt-5 d-flex flex-column justify-content-center"><ul class="list-unstyled"><li style="color: #bb9b34;" class="mt-0">-</li><li class="mt-0">Tariffe</li><li>Prenotazione</li><li>x</li></ul></div>
+                          
                         </div>
                     </div>
                 </div>

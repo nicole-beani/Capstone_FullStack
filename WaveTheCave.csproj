@@ -318,6 +318,8 @@
     <Content Include="Views\Grotte\DetailsGrottaGigante.cshtml" />
     <Content Include="Views\Prenotazione\Pagamento.cshtml" />
     <Content Include="Views\Home\ChiSiamo.cshtml" />
+    <Content Include="Views\Prenotazione\ResocontoPrenotazione.cshtml" />
+    <Content Include="Views\Prenotazione\CreateResocontoPrenotazione.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
