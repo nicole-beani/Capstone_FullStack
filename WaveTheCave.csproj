@@ -121,7 +121,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AuthController.cs" />
-    <Compile Include="Controllers\DetPrenotazioneController.cs" />
     <Compile Include="Controllers\GrotteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrariController.cs" />
@@ -144,6 +143,26 @@
     <Compile Include="Migrations\202311011601493_Diagram.cs" />
     <Compile Include="Migrations\202311011601493_Diagram.designer.cs">
       <DependentUpon>202311011601493_Diagram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311132356456_AddGrotteFK.cs" />
+    <Compile Include="Migrations\202311132356456_AddGrotteFK.designer.cs">
+      <DependentUpon>202311132356456_AddGrotteFK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311140003292_AddQuantita.cs" />
+    <Compile Include="Migrations\202311140003292_AddQuantita.designer.cs">
+      <DependentUpon>202311140003292_AddQuantita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311140007375_now.cs" />
+    <Compile Include="Migrations\202311140007375_now.designer.cs">
+      <DependentUpon>202311140007375_now.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311140009250_DeleteDetPren.cs" />
+    <Compile Include="Migrations\202311140009250_DeleteDetPren.designer.cs">
+      <DependentUpon>202311140009250_DeleteDetPren.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311140015563_DeleteDetPsuPre.cs" />
+    <Compile Include="Migrations\202311140015563_DeleteDetPsuPre.designer.cs">
+      <DependentUpon>202311140015563_DeleteDetPsuPre.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cart.cs" />
@@ -366,6 +385,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202311011601493_Diagram.resx">
       <DependentUpon>202311011601493_Diagram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311132356456_AddGrotteFK.resx">
+      <DependentUpon>202311132356456_AddGrotteFK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311140003292_AddQuantita.resx">
+      <DependentUpon>202311140003292_AddQuantita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311140007375_now.resx">
+      <DependentUpon>202311140007375_now.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311140009250_DeleteDetPren.resx">
+      <DependentUpon>202311140009250_DeleteDetPren.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311140015563_DeleteDetPsuPre.resx">
+      <DependentUpon>202311140015563_DeleteDetPsuPre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

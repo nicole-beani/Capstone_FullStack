@@ -12,7 +12,7 @@ namespace WaveTheCave.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Grotte()
         {
-            DetPrenotazione = new HashSet<DetPrenotazione>();
+            Prenotazione = new HashSet<Prenotazione>();
         }
 
         [Key]
@@ -28,6 +28,6 @@ namespace WaveTheCave.Models
         public decimal Prezzo { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DetPrenotazione> DetPrenotazione { get; set; }
+        public virtual ICollection<Prenotazione> Prenotazione { get; set; }
     }
 }

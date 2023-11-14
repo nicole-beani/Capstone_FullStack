@@ -10,10 +10,7 @@ namespace WaveTheCave.Models
     public partial class Prenotazione
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Prenotazione()
-        {
-            DetPrenotazione = new HashSet<DetPrenotazione>();
-        }
+     
 
         [Key]
         public int IdPrenotazione { get; set; }
@@ -23,17 +20,23 @@ namespace WaveTheCave.Models
 
         [Column(TypeName = "money")]
         public decimal? Importo { get; set; }
+        [Column(TypeName = "int")]
+        public int? Quantita { get; set; }
+        public int? IdGrotte { get; set; }
 
         public int? IdOrari { get; set; }
 
         public int? IdUser { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DetPrenotazione> DetPrenotazione { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+
+        
         public virtual Orari Orari { get; set; }
 
         public virtual User User { get; set; }
+
+        public virtual Grotte Grotte { get; set; }
         public Prenotazione( DateTime? data, decimal? importo, int? idOrari, int? idUser)
         {
             
