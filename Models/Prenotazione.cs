@@ -37,7 +37,7 @@ namespace WaveTheCave.Models
         public virtual User User { get; set; }
 
         public virtual Grotte Grotte { get; set; }
-        public Prenotazione( DateTime? data, decimal? importo, int? idOrari, int? idUser)
+        public Prenotazione( DateTime? data, decimal? importo, int? idOrari, int? idUser, int quantita, int idGrotte)
         {
             
             Data = data;

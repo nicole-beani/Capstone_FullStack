@@ -54,7 +54,7 @@ namespace WaveTheCave.Controllers
 
                 foreach (Cart item in ViewBag.Carrello)
                 {
-                    Prenotazione d = new Prenotazione(item.Data, item.Importo, item.IdUser);
+                    Prenotazione d = new Prenotazione(item.Data, item.Importo, item.IdUser, item.IdOrari, item.Quantita, item.IdGrotte);
                     db.Prenotazione.Add(d);
                 }
                     
@@ -74,22 +74,24 @@ namespace WaveTheCave.Controllers
         { 
         return View();
                 }
-        public ActionResult ResocontoPrenotazione( string IdUser, string IdOrari)
+        public ActionResult ResocontoPrenotazione( string IdUser, string IdOrari, string IdGrotte)
         {
-            var prenotazione = db.Prenotazione.Include(Prenotazione => Prenotazione.IdUser).Include(Prenotazione => Prenotazione.IdOrari);
-            ViewData["IdUser"] = new SelectList(db.User, "Nome", "Nome");
-            ViewData["IdOrari"] = new SelectList(db.Orari, "OrariGrotte", "OrariGrotte");
+            var prenotazione = db.Prenotazione.Include(Prenotazione => Prenotazione.IdUser).Include(Prenotazione => Prenotazione.IdOrari).Include(Prenotazione => Prenotazione.IdGrotte).ToList();
+            ViewData["IdUser"] = new SelectList(db.User, "IdUser", "Nome");
+            ViewData["IdOrari"] = new SelectList(db.Orari, "IdOrari", "OrariGrotte");
+            ViewData["IdGrotte"] = new SelectList(db.Grotte, "IdGrotte", "Nome");
             return View(db.Prenotazione.ToList());
         }
         public ActionResult CreateResocontoPrenotazione()
         {
             ViewBag.IdUser = new SelectList(db.User, "IdUser", "Nome");
             ViewBag.IdOrari = new SelectList(db.Orari, "IdOrari", "OrariGrotte");
+            ViewBag.IdGrotte = new SelectList(db.Grotte, "IdGrotte", "Nome");
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IdPrenotazione,Data, Importo, IdOrari, IdUser")] Prenotazione p)
+        public ActionResult Create([Bind(Include = "IdPrenotazione,Data, Importo,Quantita,IdGrotte, IdOrari, IdUser")] Prenotazione p)
         {
             if (ModelState.IsValid)
             {
@@ -100,5 +102,43 @@ namespace WaveTheCave.Controllers
 
             return View(p);
         }
+
+        [HttpPost]
+        public ActionResult AggiungiAlCarrello(int idGrotte, int quantita)
+        {
+            List<Cart> carrello = Session["Carrello"] as List<Cart> ?? new List<Cart>();
+
+            // Recupera i dettagli della grotta dal database
+            Grotte grotta = db.Grotte.Find(idGrotte);
+
+            if (grotta != null)
+            {
+                // Ottieni la lista degli orari disponibili
+                var orariDisponibili = db.Orari.Where(o => o.GrotteId == idGrotte)  // Modifica questa parte per adattarla alla tua relazione
+                                                .Select(o => new SelectListItem
+                                                {
+                                                    Value = o.IdOrari.ToString(),
+                                                    Text = o.OrariGrotte
+                                                })
+                                                .ToList();
+
+                // Aggiungi al carrello
+                carrello.Add(new Cart
+                {
+                    Quantita = quantita,
+                    Nome = grotta.Nome,
+                    CostoGrotta = grotta.Prezzo,
+                    IdGrotte = grotta.IdGrotte,
+                    OrariDisponibili = orariDisponibili,
+                });
+
+                Session["Carrello"] = carrello;
+            }
+
+            return RedirectToAction("Carrello");
+        }
+
+
+
     }
 }

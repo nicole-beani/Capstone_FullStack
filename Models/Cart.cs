@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace WaveTheCave.Models
 {
@@ -12,19 +13,40 @@ namespace WaveTheCave.Models
         public string Nome { get; set; }
         public decimal CostoGrotta { get; set; }
         public decimal Importo { get; set; }
-     
+      public int IdOrari { get; set; }
+        public string OrariGrotte { get; set; }
+        
+            // ... Altre proprietà ...
+
+            // Proprietà per l'orario selezionato dall'utente
+            public int OrarioSelezionato { get; set; }
+
+            // Lista degli orari disponibili
+            public List<SelectListItem> OrariDisponibili { get; set; }
+
+            public Cart()
+            {
+                // Inizializza la lista degli orari disponibili
+                OrariDisponibili = new List<SelectListItem>();
+            }
+        
+
         public int IdUser { get; set; }
         
         public int IdGrotte { get; set; }
     
        
-        public Cart() { }
-        public Cart(int quantita, string nome, decimal costoGrotta, int idGrotte)
+       
+        public Cart(int quantita, string nome, decimal costoGrotta, int idGrotte, int idOrari, string orariGrotte)
         {
             Quantita = quantita;
             Nome = nome;
             CostoGrotta = costoGrotta;
             IdGrotte = idGrotte;
+            IdOrari = idOrari;
+            OrariGrotte = orariGrotte;
+            Quantita = quantita;
+      
          
 
         }
