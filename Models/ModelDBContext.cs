@@ -12,7 +12,7 @@ namespace WaveTheCave.Models
         {
         }
 
-        public virtual DbSet<DetPrenotazione> DetPrenotazione { get; set; }
+
         public virtual DbSet<Grotte> Grotte { get; set; }
         public virtual DbSet<Orari> Orari { get; set; }
         public virtual DbSet<Prenotazione> Prenotazione { get; set; }

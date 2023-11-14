@@ -164,9 +164,12 @@
     <Compile Include="Migrations\202311140015563_DeleteDetPsuPre.designer.cs">
       <DependentUpon>202311140015563_DeleteDetPsuPre.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202311140041403_Delete tableDetPrenotazione.cs" />
+    <Compile Include="Migrations\202311140041403_Delete tableDetPrenotazione.designer.cs">
+      <DependentUpon>202311140041403_Delete tableDetPrenotazione.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cart.cs" />
-    <Compile Include="Models\DetPrenotazione.cs" />
     <Compile Include="Models\Grotte.cs" />
     <Compile Include="Models\ModelDBContext.cs" />
     <Compile Include="Models\Orari.cs" />
@@ -340,8 +343,6 @@
     <Content Include="Views\Home\ChiSiamo.cshtml" />
     <Content Include="Views\Prenotazione\ResocontoPrenotazione.cshtml" />
     <Content Include="Views\Prenotazione\CreateResocontoPrenotazione.cshtml" />
-    <Content Include="Views\DetPrenotazione\Create.cshtml" />
-    <Content Include="Views\DetPrenotazione\ResocontoDetPrenotazione.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -400,6 +401,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202311140015563_DeleteDetPsuPre.resx">
       <DependentUpon>202311140015563_DeleteDetPsuPre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311140041403_Delete tableDetPrenotazione.resx">
+      <DependentUpon>202311140041403_Delete tableDetPrenotazione.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
