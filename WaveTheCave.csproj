@@ -184,8 +184,17 @@
     <Compile Include="Migrations\202311150001504_mdbc.designer.cs">
       <DependentUpon>202311150001504_mdbc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202311151353129_NowCostr.cs" />
+    <Compile Include="Migrations\202311151353129_NowCostr.designer.cs">
+      <DependentUpon>202311151353129_NowCostr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311151432082_aggiuntaStatoPagamento.cs" />
+    <Compile Include="Migrations\202311151432082_aggiuntaStatoPagamento.designer.cs">
+      <DependentUpon>202311151432082_aggiuntaStatoPagamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\DatiPagamentoViewModel.cs" />
     <Compile Include="Models\Grotte.cs" />
     <Compile Include="Models\ModelDBContext.cs" />
     <Compile Include="Models\Orari.cs" />
@@ -331,7 +340,6 @@
     <Content Include="Views\Grotte\Index.cshtml" />
     <Content Include="Views\Auth\Login.cshtml" />
     <Content Include="Views\Auth\SignIn.cshtml" />
-    <Content Include="Views\Prenotazione\AddPrenotazione.cshtml" />
     <Content Include="Views\Grotte\GrottedelVento.cshtml" />
     <Content Include="Views\Grotte\DetailsGrottedelVento.cshtml" />
     <Content Include="Views\Grotte\LeGrotte.cshtml" />
@@ -358,6 +366,9 @@
     <Content Include="Views\Prenotazione\Pagamento.cshtml" />
     <Content Include="Views\Home\ChiSiamo.cshtml" />
     <Content Include="Views\Prenotazione\CreateResocontoPrenotazione.cshtml" />
+    <Content Include="Views\Prenotazione\ConfermaPrenotazione.cshtml" />
+    <Content Include="Views\Prenotazione\EffettuaPagamento.cshtml" />
+    <Content Include="Views\Prenotazione\AddPrenotazione.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -431,6 +442,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202311150001504_mdbc.resx">
       <DependentUpon>202311150001504_mdbc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311151353129_NowCostr.resx">
+      <DependentUpon>202311151353129_NowCostr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311151432082_aggiuntaStatoPagamento.resx">
+      <DependentUpon>202311151432082_aggiuntaStatoPagamento.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

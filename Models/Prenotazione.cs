@@ -22,6 +22,7 @@ namespace WaveTheCave.Models
         public decimal? Importo { get; set; }
         [Column(TypeName = "int")]
         public int? Quantita { get; set; }
+        public string StatoPagamento { get; set; }
         public int? IdGrotte { get; set; }
 
         public int? IdOrari { get; set; }
@@ -37,22 +38,8 @@ namespace WaveTheCave.Models
         public virtual User User { get; set; }
 
         public virtual Grotte Grotte { get; set; }
-        public Prenotazione( DateTime? data, decimal? importo, int? idOrari, int? idUser, int quantita, int idGrotte)
-        {
-            
-            Data = data;
-            Importo = importo;
-            IdOrari = idOrari;
-            IdUser = idUser;
-           
-           
-        }
+        public Prenotazione(){}
 
-        public Prenotazione(DateTime data, decimal importo, int idUser)
-        {
-            Data = data;
-            Importo = importo;
-            IdUser = idUser;
-        }
+       
     }
 }

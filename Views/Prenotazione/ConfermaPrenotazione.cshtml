@@ -1,0 +1,28 @@
+﻿@model IEnumerable<WaveTheCave.Models.Prenotazione>
+
+@{
+    ViewBag.Title = "ConfermaPrenotazione";
+}
+
+
+@foreach (var prenotazione in Model)
+{
+    <h2>Conferma Prenotazione</h2>
+
+    <p>Data: @prenotazione.Data</p>
+    <p>Grotta: @prenotazione.Grotte.Nome</p>
+    <!-- Altri dettagli della prenotazione -->
+    <p>Quantità: @prenotazione.Quantita</p>
+    <p>Orario: @prenotazione.Orari.OrariGrotte</p>
+    <p>Importo Totale: @prenotazione.Importo</p>
+    <p>Id Utente: @prenotazione.User.IdUser </p>
+
+
+    <!-- Aggiungi qui altri dettagli della prenotazione che vuoi visualizzare -->
+
+    using (Html.BeginForm("EffettuaPagamento", "Prenotazione", FormMethod.Post))
+    {
+        @Html.HiddenFor(model => prenotazione.IdPrenotazione)
+        <input type="submit" value="Effettua Pagamento" />
+    }
+}

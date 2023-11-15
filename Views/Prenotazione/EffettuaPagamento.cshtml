@@ -1,0 +1,29 @@
+﻿@model WaveTheCave.Models.Prenotazione
+
+@{
+    ViewBag.Title = "EffettuaPagamento";
+}
+
+<h2>Effettua Pagamento</h2>
+
+<!-- Visualizza i dettagli della prenotazione -->
+<p>Data: @Model.Data</p>
+
+
+<p>Grotta: @Model.Grotte.Nome</p>
+<p>Importo Totale: @Model.Importo</p>
+<p>Quantità: @Model.Quantita</p>
+<!-- Altri dettagli della prenotazione -->
+<!-- Aggiungi il form per i dati della carta di credito -->
+@using (Html.BeginForm("EffettuaPagamento", "Prenotazione", FormMethod.Post))
+{
+    @Html.HiddenFor(model => model.IdPrenotazione)
+
+    <!-- Aggiungi qui i campi per i dati della carta di credito -->
+    <label for="NumeroCarta">Numero Carta:</label>
+    <input type="text" name="NumeroCarta" />
+
+    <!-- Altri campi per i dati della carta di credito -->
+
+    <input type="submit" value="Conferma Pagamento" />
+}
