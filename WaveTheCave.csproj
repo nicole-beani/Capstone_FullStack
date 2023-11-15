@@ -168,6 +168,22 @@
     <Compile Include="Migrations\202311140041403_Delete tableDetPrenotazione.designer.cs">
       <DependentUpon>202311140041403_Delete tableDetPrenotazione.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202311142247598_GrotteId.cs" />
+    <Compile Include="Migrations\202311142247598_GrotteId.designer.cs">
+      <DependentUpon>202311142247598_GrotteId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311142313310_DeleteGrotteId.cs" />
+    <Compile Include="Migrations\202311142313310_DeleteGrotteId.designer.cs">
+      <DependentUpon>202311142313310_DeleteGrotteId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311142356105_prova.cs" />
+    <Compile Include="Migrations\202311142356105_prova.designer.cs">
+      <DependentUpon>202311142356105_prova.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311150001504_mdbc.cs" />
+    <Compile Include="Migrations\202311150001504_mdbc.designer.cs">
+      <DependentUpon>202311150001504_mdbc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Grotte.cs" />
@@ -403,6 +419,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202311140041403_Delete tableDetPrenotazione.resx">
       <DependentUpon>202311140041403_Delete tableDetPrenotazione.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311142247598_GrotteId.resx">
+      <DependentUpon>202311142247598_GrotteId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311142313310_DeleteGrotteId.resx">
+      <DependentUpon>202311142313310_DeleteGrotteId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311142356105_prova.resx">
+      <DependentUpon>202311142356105_prova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311150001504_mdbc.resx">
+      <DependentUpon>202311150001504_mdbc.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

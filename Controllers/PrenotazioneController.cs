@@ -37,33 +37,33 @@ namespace WaveTheCave.Controllers
             return RedirectToAction("AddPrenotazione");
         }
 
-        [HttpPost]
-        public ActionResult AddPrenotazione(Prenotazione prenotazione)
-        {
-            ViewBag.Carrello = Session["Carrello"];
-            prenotazione.Data = DateTime.Now;
+        //[HttpPost]
+        //public ActionResult AddPrenotazione(Prenotazione prenotazione)
+        //{
+        //    ViewBag.Carrello = Session["Carrello"];
+        //    prenotazione.Data = DateTime.Now;
 
 
-            prenotazione.Importo = Cart.CalcoloCostoTotale(ViewBag.Carrello);
-            User user = db.User.FirstOrDefault(u => u.Username == User.Identity.Name);
-            prenotazione.IdUser = user.IdUser;
+        //    prenotazione.Importo = Cart.CalcoloCostoTotale(ViewBag.Carrello);
+        //    User user = db.User.FirstOrDefault(u => u.Username == User.Identity.Name);
+        //    prenotazione.IdUser = user.IdUser;
 
-           if (ModelState.IsValid)
-            {
+        //   if (ModelState.IsValid)
+        //    {
 
 
-                foreach (Cart item in ViewBag.Carrello)
-                {
-                    Prenotazione d = new Prenotazione(item.Data, item.Importo, item.IdUser, item.IdOrari, item.Quantita, item.IdGrotte);
-                    db.Prenotazione.Add(d);
-                }
+        //        foreach (Cart item in ViewBag.Carrello)
+        //        {
+        //            Prenotazione d = new Prenotazione(item.Data, item.Importo, item.IdUser, item.IdOrari, item.Quantita, item.IdGrotte);
+        //            db.Prenotazione.Add(d);
+        //        }
                     
-                Session.Remove("Carrello");
-                return RedirectToAction("Index", " Home");
-            }
-            else { return View(); }
+        //        Session.Remove("Carrello");
+        //        return RedirectToAction("Index", " Home");
+        //    }
+        //    else { return View(); }
           
-        }
+        //}
         [Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
@@ -102,43 +102,6 @@ namespace WaveTheCave.Controllers
 
             return View(p);
         }
-
-        [HttpPost]
-        public ActionResult AggiungiAlCarrello(int idGrotte, int quantita)
-        {
-            List<Cart> carrello = Session["Carrello"] as List<Cart> ?? new List<Cart>();
-
-            // Recupera i dettagli della grotta dal database
-            Grotte grotta = db.Grotte.Find(idGrotte);
-
-            if (grotta != null)
-            {
-                // Ottieni la lista degli orari disponibili
-                var orariDisponibili = db.Orari.Where(o => o.GrotteId == idGrotte)  // Modifica questa parte per adattarla alla tua relazione
-                                                .Select(o => new SelectListItem
-                                                {
-                                                    Value = o.IdOrari.ToString(),
-                                                    Text = o.OrariGrotte
-                                                })
-                                                .ToList();
-
-                // Aggiungi al carrello
-                carrello.Add(new Cart
-                {
-                    Quantita = quantita,
-                    Nome = grotta.Nome,
-                    CostoGrotta = grotta.Prezzo,
-                    IdGrotte = grotta.IdGrotte,
-                    OrariDisponibili = orariDisponibili,
-                });
-
-                Session["Carrello"] = carrello;
-            }
-
-            return RedirectToAction("Carrello");
-        }
-
-
-
+        
     }
 }

@@ -26,7 +26,11 @@ namespace WaveTheCave.Models
 
             modelBuilder.Entity<Prenotazione>()
                 .Property(e => e.Importo)
-                .HasPrecision(19, 4);
+                 .HasColumnName("Importo")  
+                 .HasColumnType("money");
+
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

@@ -20,6 +20,7 @@ namespace WaveTheCave.Models
 
         [StringLength(50)]
         public string OrariGrotte { get; set; }
+     
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Prenotazione> Prenotazione { get; set; }
