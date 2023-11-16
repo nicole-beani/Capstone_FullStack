@@ -4,30 +4,78 @@
     ViewBag.Title = "AddPrenotazione";
 }
 
-<h2 class="mt-5 pt-5">Aggiungi Prenotazione</h2>
 
-@using (Html.BeginForm("AddPrenotazione", "Prenotazione", FormMethod.Post))
-{
-    @Html.LabelFor(model => model.IdUser)
-    @Html.TextBoxFor(model => model.IdUser, new {  required = "required" })
+<style>
+    body {
+        background-color: #f4f4f4;
+    }
 
-    @Html.LabelFor(model => model.IdGrotte)
-    @Html.DropDownListFor(model => model.IdGrotte, new SelectList(ViewBag.Grotte, "IdGrotte", "Nome"), "Seleziona Grotta", new { required = "required" })
+    .container {
+       
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-    @Html.LabelFor(model => model.Quantita)
-    @Html.TextBoxFor(model => model.Quantita, new { type = "number", min = "1", required = "required" })
+    h2 {
+        color: #333;
+    }
 
-    @Html.LabelFor(model => model.Data)
-    @Html.TextBoxFor(model => model.Data, new { type = "date", required = "required" })
+    label {
+        display: block;
+        margin-top: 10px;
+        color: #555;
+    }
 
-    @Html.LabelFor(model => model.IdOrari)
-    @Html.DropDownListFor(model => model.IdOrari, new SelectList(ViewBag.Orari, "IdOrari", "OrariGrotte"), "Seleziona Orario", new { required = "required" })
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
 
+    input[type="submit"] {
+        background-color: #bb9b34;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
 
+        input[type="submit"]:hover {
+            background-color: #fff;
+            color: #bb9b34;
+            border: 1px solid #bb9b34;
+        }
+</style>
 
-    @*<p>Importo Totale: @Model.Importo</p>*@
+<div class="container pt-5 mt-5">
+    <h2>Aggiungi Prenotazione</h2>
 
+    @using (Html.BeginForm("AddPrenotazione", "Prenotazione", FormMethod.Post))
+    {
+        <label for="IdUser">Compila il campo con il tuo nome e cognome:</label>
+        @Html.TextBoxFor(model => model.IdUser, new { required = "required" })
 
+        <label for="IdGrotte">Seleziona la Grotta:</label>
+        @Html.DropDownListFor(model => model.IdGrotte, new SelectList(ViewBag.Grotte, "IdGrotte", "Nome"), "Seleziona Grotta", new { required = "required" })
 
-    <input type="submit" value="Conferma Prenotazione" />
-}
+        <label for="Quantita">Compila il campo con il numero totale di persone:</label>
+        @Html.TextBoxFor(model => model.Quantita, new { type = "number", min = "1", required = "required" })
+
+        <label for="Data">Seleziona la Data:</label>
+        @Html.TextBoxFor(model => model.Data, new { type = "date", required = "required" })
+
+        <label for="IdOrari">Seleziona l'Orario:</label>
+        @Html.DropDownListFor(model => model.IdOrari, new SelectList(ViewBag.Orari, "IdOrari", "OrariGrotte"), "Seleziona Orario", new { required = "required" })
+
+        <input type="submit" value="Conferma Prenotazione" class="d-flex row m-3" />
+    }
+</div>

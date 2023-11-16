@@ -33,6 +33,7 @@ textarea {
     height: 20%;
 
 }
+
 /*media*/
 @media (max-width: 1000px) {
 
@@ -115,8 +116,9 @@ h6, p {
     border-radius: 6px;
     transition: all 0.375s;
 }
+/*Stile pagina EffettuaPrenotazione*/
 .payment-form {
-    padding-bottom: 50px;
+    
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -268,5 +270,4 @@ footer {
     max-width: 150px;
     height: auto;
 }
-
 

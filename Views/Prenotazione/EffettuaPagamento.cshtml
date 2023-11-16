@@ -3,27 +3,115 @@
 @{
     ViewBag.Title = "EffettuaPagamento";
 }
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Payment</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link href="~/Content/Site.css" rel="stylesheet" />
+        <style>
 
-<h2>Effettua Pagamento</h2>
+            body {
+                background-image: url(https://www.grottagigante.it/wp-content/uploads/2018/06/Giorgio_Perich_sentiero_ruggero_1280x640.jpg) !important;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+                background-size: cover;
+            }
 
-<!-- Visualizza i dettagli della prenotazione -->
-<p>Data: @Model.Data</p>
+            input[type="submit"] {
+                background-color: #bb9b34;
+                color: #fff;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+              
+            }
+
+                input[type="submit"]:hover {
+                    background-color: #fff;
+                    color: #bb9b34;
+                    border: 1px solid #bb9b34;
+                }
+        
+        </style>
+    </head>
+<body>
+        <main class="page payment-page">
+            <section class="payment-form p-2 ">
+                <div class="container">
+                    <div class="block-heading">
+
+                    </div>
+                    <form>
+
+                        <div class="card-details">
+
+                            <h2 >Effettua il Pagamento</h2>
 
 
-<p>Grotta: @Model.Grotte.Nome</p>
-<p>Importo Totale: @Model.Importo</p>
-<p>Quantità: @Model.Quantita</p>
-<!-- Altri dettagli della prenotazione -->
-<!-- Aggiungi il form per i dati della carta di credito -->
+
+                            <p>Data: @(Model.Data.HasValue ? Model.Data.Value.ToString("dd/MM/yyyy") : "N/A")</p>
+                            <p>Grotta: @Model.Grotte.Nome</p>
+                            <p>Importo Totale: @((Model.Importo.HasValue ? Model.Importo.Value.ToString("N2") : "N/A")) €</p>
+
+                            <p>Quantità: @Model.Quantita</p>
+
+                            <h2>Payment</h2>
+
+                                <h3 class="title">Aggiungi una nuova carta</h3>
+                                <div class="row">
+                                    <div class="form-group col-sm-7">
+                                        <label for="card-holder">NOME DEL TITOLARE</label>
+                                        <input id="card-holder" type="text" class="form-control" placeholder="xxx xxx" aria-label="Card Holder" aria-describedby="basic-addon1">
+                                    </div>
+                                    <div class="form-group col-sm-5">
+                                        <label for="">DATA DI SCADENZA</label>
+                                        <div class="input-group expiration-date">
+                                            <input type="text" class="form-control" placeholder="MM" aria-label="MM" aria-describedby="basic-addon1">
+                                            <span class="date-separator ps-2">/</span>
+                                            <input type="text" class="form-control" placeholder="YY" aria-label="YY" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-sm-8">
+                                        <label for="card-number">NUMERO DI CARTA</label>
+                                        <input id="card-number" type="text" class="form-control" placeholder="XXXX XXXX XXXX XXXX" aria-label="Card Holder" aria-describedby="basic-addon1">
+                                    </div>
+                                    <div class="form-group col-sm-4">
+                                        <label for="cvc">CVV</label>
+                                        <input id="cvc" type="text" class="form-control" placeholder="XXX" aria-label="Card Holder" aria-describedby="basic-addon1">
+                                    </div>
+                                   
+
+                                </div>
+
+
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </body>
+
+</html>
+
+
 @using (Html.BeginForm("EffettuaPagamento", "Prenotazione", FormMethod.Post))
 {
     @Html.HiddenFor(model => model.IdPrenotazione)
 
-    <!-- Aggiungi qui i campi per i dati della carta di credito -->
-    <label for="NumeroCarta">Numero Carta:</label>
-    <input type="text" name="NumeroCarta" />
 
-    <!-- Altri campi per i dati della carta di credito -->
 
-    <input type="submit" value="Conferma Pagamento" />
+    <div style="display:flex; justify-content:center">
+    <input type="submit" value="Conferma Pagamento" class="mb-2" />
+        </div>
 }
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

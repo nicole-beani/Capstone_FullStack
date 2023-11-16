@@ -1,0 +1,59 @@
+﻿@model IEnumerable<WaveTheCave.Models.Prenotazione>
+
+@{
+    ViewBag.Title = "TutteLePrenotazioni";
+}
+
+<h2 class="pt-5 mt-5">Tutte Le Prenotazioni</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Grotte.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Orari.OrariGrotte)
+        </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.Data)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Importo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantita)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StatoPagamento)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Grotte.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Orari.OrariGrotte)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Data)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Importo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantita)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StatoPagamento)
+        </td>
+       
+    </tr>
+}
+
+</table>
