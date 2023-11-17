@@ -18,7 +18,7 @@ namespace WaveTheCave.Controllers
 
 
        
-        [Authorize(Roles = "Admin")]
+        
         public ActionResult Index()
         {
             return View(db.Prenotazione.ToList());

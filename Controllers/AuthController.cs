@@ -25,7 +25,7 @@ namespace WaveTheCave.Controllers
             if (user.Username != null && user.Password == u.Password)
             {
                 FormsAuthentication.SetAuthCookie(user.Username, false);
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("AddPrenotazione", "Prenotazione");
             }
             else return View();
         }
@@ -47,7 +47,7 @@ namespace WaveTheCave.Controllers
                     db.User.Add(u);
                     db.SaveChanges();
                     FormsAuthentication.SetAuthCookie(u.Username, false);
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("AddPrenotazione", "Prenotazione");
                 }
                 else
                 {

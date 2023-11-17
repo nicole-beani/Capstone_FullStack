@@ -42,8 +42,7 @@ namespace WaveTheCave.Controllers
         }
 
         // POST: Orari/Create
-        // Per la protezione da attacchi di overposting, abilitare le proprietà a cui eseguire il binding. 
-        // Per altri dettagli, vedere https://go.microsoft.com/fwlink/?LinkId=317598.
+ 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "IdOrari,OrariGrotte")] Orari orari)
@@ -74,8 +73,7 @@ namespace WaveTheCave.Controllers
         }
 
         // POST: Orari/Edit/5
-        // Per la protezione da attacchi di overposting, abilitare le proprietà a cui eseguire il binding. 
-        // Per altri dettagli, vedere https://go.microsoft.com/fwlink/?LinkId=317598.
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "IdOrari,OrariGrotte")] Orari orari)
