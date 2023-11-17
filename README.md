@@ -1,2 +1,3 @@
 🌐 Progetto Capstone Full Stack
+
 Questa applicazione web consente agli utenti di iscriversi, accedere, e prenotare emozionanti escursioni nelle affascinanti grotte italiane. Offre un tour virtuale completo a 360 gradi di ciascuna grotta, assicurando un'esperienza di visita virtuale autentica. Inoltre, gli utenti possono leggere dettagliate descrizioni, scoperte e itinerari delle grotte. Il video sulla pagina principale e le immagini presenti nelle pagine principali delle grotte sono state personalmente elaborate dall'autore tramite PicsArt/Canva e VN. L’applicazione è stato sviluppata utilizzando Bootstrap per il front-end, ASP.NET  MVC per il back-end e SQL Server per l’archiviazione dei dati.
