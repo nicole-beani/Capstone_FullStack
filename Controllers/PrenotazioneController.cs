@@ -24,10 +24,7 @@ namespace WaveTheCave.Controllers
             return View(db.Prenotazione.ToList());
         }
 
-       public ActionResult Pagamento()
-        { 
-        return View();
-                }
+      
        
         
         // GET: Prenotazione/AddPrenotazione

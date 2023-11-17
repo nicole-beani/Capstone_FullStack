@@ -5,12 +5,29 @@
 
 
 <br />
-<h1 class="title mt-5 text-center" >Le Grotte di Borgio Verezzi</h1>
+<h1 class="title mt-5 text-center">Le Grotte di Borgio Verezzi</h1>
 <p>
     <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!4v1699399608244!6m8!1m7!1sCAoSK0FGMVFpcE5oRGVxd0xqaHYtMlJkOXoxTXJLTkdGbkJ0MWFXZzdXZHdJM3c.!2m2!1d44.1623645!2d8.3044995!3f249.84!4f-22.47!5f0.4000000000000002" width="1100" height="500" frameborder="0" style="border: 0; width: 100%; height: 500px;" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
 </p>
 <link href="~/Content/Site.css" rel="stylesheet" />
 <link href="~/Content/GrottediBorgioVerezzi.css" rel="stylesheet" />
+<style>
+    button {
+        background-color: #dc9047;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+        button:hover {
+            background-color: #fff;
+            color: #dc9047;
+            border: 2px solid #dc9047;
+        }
+    </style>
 <div class=" mb-3">
     <div class="row g-0 d-flex align-items-center  ">
         <div class="col me-5">
@@ -66,9 +83,11 @@
         </div>
     </div>
 </div>
-<div>
-    <h3 class="mt-5">Scopri il suo itinerario</h3>
-    <button>@Html.ActionLink("Clicca qui!", "DetailsGrottediBorgioVerezzi", "Grotte", new { area = "" }, new { @class = "nav-link" })</button>
+<div class="d-flex justify-content-end">
+    <div class="d-flex justify-content-end flex-column w-25 py-4">
+        <h2 class="mt-5 ">Scopri il suo itinerario</h2>
+        <button>@Html.ActionLink("Clicca qui!", "DetailsGrottediBorgioVerezzi", "Grotte", new { area = "" }, new { @class = "nav-link " })</button>
+    </div>
 </div>
 
 

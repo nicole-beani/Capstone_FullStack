@@ -362,7 +362,6 @@
     <Content Include="Views\Grotte\DetailsGrottediBossea.cshtml" />
     <Content Include="Views\Grotte\GrottaGigante.cshtml" />
     <Content Include="Views\Grotte\DetailsGrottaGigante.cshtml" />
-    <Content Include="Views\Prenotazione\Pagamento.cshtml" />
     <Content Include="Views\Home\ChiSiamo.cshtml" />
     <Content Include="Views\Prenotazione\ConfermaPrenotazione.cshtml" />
     <Content Include="Views\Prenotazione\EffettuaPagamento.cshtml" />

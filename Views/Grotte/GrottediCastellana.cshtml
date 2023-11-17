@@ -10,6 +10,23 @@
 </p>
 <link href="~/Content/GrotteGenerale.css" rel="stylesheet" />
 <link href="~/Content/Site.css" rel="stylesheet" />
+<style>
+    button {
+        background-color: #8c8179;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+        button:hover {
+            background-color: #fff;
+            color: #8c8179;
+            border: 2px solid #8c8179;
+        }
+</style>
 <div class=" mb-3">
     <div class="row g-0 d-flex align-items-center  ">
         <div class="col me-5">
@@ -78,10 +95,11 @@
         </div>
     </div>
 </div>
-<div>
-    <h3 class="mt-5">Scopri il suo itinerario</h3>
-    <button>@Html.ActionLink("Clicca qui!", "DetailsGrottediCastellana", "Grotte", new { area = "" }, new { @class = "nav-link" })</button>
+<div class="d-flex justify-content-start">
+    <div class="d-flex justify-content-start flex-column w-25 py-4">
+        <h2 class="mt-5 ">Scopri il suo itinerario</h2>
+        <button>@Html.ActionLink("Clicca qui!", "DetailsGrottediCastellana", "Grotte", new { area = "" }, new { @class = "nav-link" })</button>
+    </div>
 </div>
-
 
 

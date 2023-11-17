@@ -4,12 +4,29 @@
 }
 
 <br />
-<h1 style="color: #a290f2 " class="mt-5 text-center">Le Grotte di Pertosa Auletta</h1>
+<h1 style="color: ##a28ff1 " class="mt-5 text-center">Le Grotte di Pertosa Auletta</h1>
 <p>
     <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!4v1699399835345!6m8!1m7!1sCAoSLEFGMVFpcFA5YVExQ0ZXU0RuY3dlT1p5VmcyQXd0N2YzZ3VsZ05IMjBBSVIx!2m2!1d40.53636086174537!2d15.45531535596342!3f216.32271!4f0!5f0.7820865974627469" width="1100" height="500" frameborder="0" style="border: 0; width: 100%; height: 500px;" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
 </p>
 <link href="~/Content/GrotteGenerale.css" rel="stylesheet" />
 <link href="~/Content/Site.css" rel="stylesheet" />
+<style>
+    button {
+        background-color: #a28ff1;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+        button:hover {
+            background-color: #fff;
+            color: #a28ff1;
+            border: 2px solid #a28ff1;
+        }
+</style>
 <div class=" mb-3">
     <div class="row g-0 d-flex align-items-center  ">
         <div class="col me-5">
@@ -89,8 +106,9 @@
         </div>
     </div>
 </div>
-<div>
-    <h3 class="mt-5">Scopri il suo itinerario</h3>
-    <button>@Html.ActionLink("Clicca qui!", "DetailsGrottediPertosaAuletta", "Grotte", new { area = "" }, new { @class = "nav-link" })</button>
+<div class="d-flex justify-content-start">
+    <div class="d-flex justify-content-start flex-column w-25 py-4">
+        <h2 class="mt-5 ">Scopri il suo itinerario</h2>
+        <button>@Html.ActionLink("Clicca qui!", "DetailsGrottediPertosaAuletta", "Grotte", new { area = "" }, new { @class = "nav-link" })</button>
+    </div>
 </div>
-
