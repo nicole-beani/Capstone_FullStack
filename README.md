@@ -19,6 +19,7 @@ Questa applicazione web consente agli utenti di iscriversi, accedere, e prenotar
 Dopo la clonazione della Repository sul tuo computer, dovrete aprire la soluzione in Visual Studio e configurare la stringa di connessione nel file web.config per il database. Sucessivamente aprite la Console di Gestione Pacchetti ed eseguite i seguenti comandi:
 - "<b>Update-Database</b>";
 - "<b> Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r </b>".
+  
 E avviare l'applicazione.
 
 <h3>👩🏻‍💻 Autore </h3>
