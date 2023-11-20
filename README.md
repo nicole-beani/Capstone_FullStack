@@ -16,7 +16,7 @@ Questa applicazione web consente agli utenti di iscriversi, accedere, e prenotar
 
 ⌨️ Installazione
 
-Questo progetto è stato creato utilizzando ASP.net MVC.
+Questo progetto è stato creato utilizzando ASP.NET MVC.
 Prima di avviare il sito, è necessario installare il seguente pacchetto : "Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r"
 
 
