@@ -66,7 +66,7 @@ h1, h2, h3, h4, h5 {
     font-weight: 600;
 }
 
-h6, p {
+h6, p{
     font-family: inherit;
     font-weight: 300;
     font-size: 1.3em;
@@ -271,3 +271,8 @@ footer {
     height: auto;
 }
 
+
+/*Navbar*/
+li:hover {
+    border-bottom: 2px solid #bb9b34;
+}

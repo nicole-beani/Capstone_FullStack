@@ -4,7 +4,7 @@
 }
 
 <br />
-<h1 style="color: ##a28ff1 " class="mt-5 text-center">Le Grotte di Pertosa Auletta</h1>
+<h1 style="color: #a28ff1 " class="mt-5 text-center">Le Grotte di Pertosa Auletta</h1>
 <p>
     <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!4v1699399835345!6m8!1m7!1sCAoSLEFGMVFpcFA5YVExQ0ZXU0RuY3dlT1p5VmcyQXd0N2YzZ3VsZ05IMjBBSVIx!2m2!1d40.53636086174537!2d15.45531535596342!3f216.32271!4f0!5f0.7820865974627469" width="1100" height="500" frameborder="0" style="border: 0; width: 100%; height: 500px;" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
 </p>
@@ -106,9 +106,50 @@
         </div>
     </div>
 </div>
-<div class="d-flex justify-content-start">
-    <div class="d-flex justify-content-start flex-column w-25 py-4">
-        <h2 class="mt-5 ">Scopri il suo itinerario</h2>
-        <button>@Html.ActionLink("Clicca qui!", "DetailsGrottediPertosaAuletta", "Grotte", new { area = "" }, new { @class = "nav-link" })</button>
+<div class="container">
+    <div class="info row d-flex align-items-center justify-content-around">
+        <div class="col-xs-12 col-sm-6 col-md-4 mb-3">
+
+            <h2 class="card-title">Informazioni</h2>
+            <div class="card-body">
+                <br />
+                <h3>Orari</h3>
+                <p>
+                    ◈  Orario continuato dalle ore 09:00 alle ore 17:00.
+                </p>
+                <p>
+                    ◈  Gli orari sono suscettibili di variazione.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4 mb-3">
+
+            <div class="card-body">
+                <h3>Biglietti</h3>
+
+
+                <p> ◈ Adulti - </p>
+
+
+                <h5>GRATUITÁ</h5>
+
+                <p> ◈ Disabili e accompagnatori disabili</p>
+                <p> ◈ Bambini</p>
+                <p> ◈ Insegnanti</p>
+
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-md-4 mb-3">
+
+            <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-end flex-column w-75 py-4">
+
+                    <h2 class="mt-5">Scopri il suo itinerario</h2>
+                    <button>@Html.ActionLink("Clicca qui!", "DetailsGrottediPertosaAuletta", "Grotte", new { area = "" }, new { @class = "nav-link " })</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

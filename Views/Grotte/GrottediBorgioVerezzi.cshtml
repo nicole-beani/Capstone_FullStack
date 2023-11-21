@@ -9,6 +9,7 @@
 <p>
     <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!4v1699399608244!6m8!1m7!1sCAoSK0FGMVFpcE5oRGVxd0xqaHYtMlJkOXoxTXJLTkdGbkJ0MWFXZzdXZHdJM3c.!2m2!1d44.1623645!2d8.3044995!3f249.84!4f-22.47!5f0.4000000000000002" width="1100" height="500" frameborder="0" style="border: 0; width: 100%; height: 500px;" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
 </p>
+
 <link href="~/Content/Site.css" rel="stylesheet" />
 <link href="~/Content/GrottediBorgioVerezzi.css" rel="stylesheet" />
 <style>
@@ -27,7 +28,7 @@
             color: #dc9047;
             border: 2px solid #dc9047;
         }
-    </style>
+</style>
 <div class=" mb-3">
     <div class="row g-0 d-flex align-items-center  ">
         <div class="col me-5">
@@ -83,11 +84,54 @@
         </div>
     </div>
 </div>
-<div class="d-flex justify-content-end">
-    <div class="d-flex justify-content-end flex-column w-25 py-4">
-        <h2 class="mt-5 ">Scopri il suo itinerario</h2>
-        <button>@Html.ActionLink("Clicca qui!", "DetailsGrottediBorgioVerezzi", "Grotte", new { area = "" }, new { @class = "nav-link " })</button>
+<div class="container">
+    <div class="info row d-flex align-items-center justify-content-around">
+        <div class="col-xs-12 col-sm-6 col-md-4 mb-3">
+
+            <h2 class="card-title">Informazioni</h2>
+            <div class="card-body">
+                <br />
+                <h3>Orari</h3>
+                <p>
+                    ◈  Orario continuato dalle ore 09:00 alle ore 17:00.
+                </p>
+                <p>
+                    ◈  Gli orari sono suscettibili di variazione.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4 mb-3">
+
+            <div class="card-body">
+                <h3>Biglietti</h3>
+
+
+                <p> ◈ Adulti - </p>
+
+
+                <h5>GRATUITÁ</h5>
+
+                <p> ◈ Disabili e accompagnatori disabili</p>
+                <p> ◈ Bambini</p>
+                <p> ◈ Insegnanti</p>
+
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-md-4 mb-3">
+
+            <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-end flex-column w-75 py-4">
+
+                    <h2 class="mt-5">Scopri il suo itinerario</h2>
+                    <button>@Html.ActionLink("Clicca qui!", "DetailsGrottediBorgioVerezzi", "Grotte", new { area = "" }, new { @class = "nav-link " })</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+
 
 
