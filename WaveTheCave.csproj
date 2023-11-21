@@ -193,7 +193,6 @@
       <DependentUpon>202311151432082_aggiuntaStatoPagamento.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\DatiPagamentoViewModel.cs" />
     <Compile Include="Models\Grotte.cs" />
     <Compile Include="Models\ModelDBContext.cs" />
@@ -353,7 +352,6 @@
     <Content Include="Views\Grotte\GrottediStiffe.cshtml" />
     <Content Include="Views\Grotte\DetailsGrottediStiffe.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\Index2.cshtml" />
     <Content Include="Views\Grotte\GrottediPastena.cshtml" />
     <Content Include="Views\Grotte\DetailsGrottediPastena.cshtml" />
     <Content Include="Views\Grotte\GrottediFrasassi.cshtml" />
