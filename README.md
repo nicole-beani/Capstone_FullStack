@@ -22,6 +22,11 @@ Dopo la clonazione della Repository sul tuo computer, dovrete aprire la soluzion
   
 E avviare l'applicazione.
 
+<h3>📽️ Anteprima </h3>
+<video width="320" height="240" controls>
+    <source src="MVC.MP4" type="video/mp4">
+</video>
+
 <h3>👩🏻‍💻 Autore </h3>
 
 Nicole Beani
